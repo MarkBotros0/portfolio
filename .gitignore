@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# logs
+*.log
+npm-debug.log*
+
+# editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# env
+*.local
+.env
+
+# design-direction canvases — kept locally for reference; they live in the
+# MarkBotros0/portfolio-selection repo, not this one
+*.dc.html
+fflate.min.js
