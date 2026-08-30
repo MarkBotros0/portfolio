@@ -34,11 +34,34 @@ export function Timeline() {
                   {entry.engagements.map((eng) => (
                     <li key={eng.title} data-spot className="xp-card">
                       <Spot size={300} color="var(--a-faint)" />
-                      <p className="xp-card-period">{eng.period}</p>
-                      <h4>{eng.title}</h4>
-                      <p className="xp-card-desc">
-                        <RichText segments={eng.description} />
-                      </p>
+                      {eng.frame ? (
+                        <div className="xp-card-grid">
+                          <div>
+                            <p className="xp-card-period">{eng.period}</p>
+                            <h4>{eng.title}</h4>
+                            <p className="xp-card-desc">
+                              <RichText segments={eng.description} />
+                            </p>
+                            {eng.stat && (
+                              <span className="stat-chip">
+                                <span className="value">{eng.stat.value}</span>
+                                <span className="label">{eng.stat.label}</span>
+                              </span>
+                            )}
+                          </div>
+                          <div className="xp-shot">
+                            {eng.frame.image && <img src={eng.frame.image} alt={`${eng.title} screenshot`} />}
+                          </div>
+                        </div>
+                      ) : (
+                        <>
+                          <p className="xp-card-period">{eng.period}</p>
+                          <h4>{eng.title}</h4>
+                          <p className="xp-card-desc">
+                            <RichText segments={eng.description} />
+                          </p>
+                        </>
+                      )}
                     </li>
                   ))}
                 </ul>

@@ -36,6 +36,17 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+/* black arrow cursor; the light outline keeps it visible on the dark base.
+   Applied to links/buttons too so hover doesn't swap in the OS white hand. */
+html,
+body,
+a,
+button {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M4 1v17l4.4-4L11 20l3-1.3-2.6-5.8h5.8Z' fill='%23000' stroke='%23fff' stroke-opacity='.9' stroke-width='1.1'/%3E%3C/svg%3E")
+      4 1,
+    auto;
+}
 a {
   color: var(--a);
   text-decoration: none;
@@ -78,7 +89,6 @@ button {
   color: inherit;
   background: none;
   border: none;
-  cursor: pointer;
 }
 input {
   font: inherit;
@@ -131,15 +141,6 @@ input {
     background-position: 240% 0;
   }
 }
-@keyframes twinkle {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 0.85;
-  }
-}
 @keyframes rise {
   from {
     opacity: 0;
@@ -175,24 +176,13 @@ input {
   z-index: 0;
   pointer-events: none;
 }
-.bg-stars {
-  background-image:
-    radial-gradient(1.4px 1.4px at 12% 18%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(1.2px 1.2px at 78% 12%, rgba(255, 255, 255, 0.42), transparent),
-    radial-gradient(1.6px 1.6px at 34% 62%, rgba(255, 255, 255, 0.38), transparent),
-    radial-gradient(1.2px 1.2px at 88% 48%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(1.3px 1.3px at 58% 82%, rgba(255, 255, 255, 0.34), transparent),
-    radial-gradient(1.1px 1.1px at 22% 88%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1.5px 1.5px at 66% 32%, rgba(255, 255, 255, 0.3), transparent);
-  animation: twinkle 7s ease-in-out infinite;
-}
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(130% 90% at 50% -10%, #000 4%, transparent 68%);
-  -webkit-mask-image: radial-gradient(130% 90% at 50% -10%, #000 4%, transparent 68%);
+.dot-grid {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 .bg-aurora {
   position: fixed;
@@ -238,27 +228,6 @@ input {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
 }
-.cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 720px;
-  height: 720px;
-  margin: -360px 0 0 -360px;
-  border-radius: 50%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0;
-  background: radial-gradient(
-    circle,
-    color-mix(in oklab, var(--a) 30%, transparent),
-    color-mix(in oklab, var(--a2) 12%, transparent) 42%,
-    transparent 68%
-  );
-  filter: blur(48px);
-  transition: opacity 0.6s ease;
-}
-
 /* ---------- scroll progress + section rail ---------- */
 
 .progress-track {
@@ -1155,7 +1124,7 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: clamp(22px, 3vw, 36px);
-  background: rgba(0, 0, 0, 0.26);
+  background: #08080d;
   animation: rise 0.45s var(--ease-out);
 }
 .detail-col {
@@ -1213,7 +1182,7 @@ input {
   overflow: hidden;
   border: 1px dashed rgba(255, 255, 255, 0.16);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.022);
+  background: linear-gradient(rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0.022)), var(--panel);
   padding: 22px;
   display: flex;
   flex-direction: column;
@@ -1238,6 +1207,27 @@ input {
   border: 1px solid var(--line);
   border-radius: 7px;
   padding: 4px 9px;
+}
+.pshot {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background-color: #0e0e16;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045) 0 8px,
+    rgba(255, 255, 255, 0) 8px 18px
+  );
+}
+.pshot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .pcard h3 {
   position: relative;
@@ -1417,7 +1407,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 17px 19px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01)), var(--panel);
   transition: border-color 0.3s ease;
 }
 .xp-card:hover {
@@ -1441,6 +1431,56 @@ input {
   color: var(--dim);
   font-size: 14.5px;
   line-height: 1.64;
+}
+.xp-card-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.xp-shot {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background-color: #0e0e16;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045) 0 8px,
+    rgba(255, 255, 255, 0) 8px 18px
+  );
+}
+.xp-shot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stat-chip {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--a-faint);
+  border: 1px solid color-mix(in oklab, var(--a) 30%, transparent);
+  border-radius: 9px;
+  padding: 7px 11px;
+}
+.stat-chip .value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1;
+  color: var(--a);
+}
+.stat-chip .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--dim);
 }
 .accent {
   color: var(--a);
@@ -1471,16 +1511,12 @@ input {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.2);
 }
-.skill-card--span2 {
-  grid-column: span 2;
-}
 .skill-card--wide {
   background: linear-gradient(165deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.012)), var(--panel);
 }
 .skill-rim {
   position: relative;
   overflow: hidden;
-  grid-column: span 2;
   border-radius: 20px;
   padding: 1px;
   transition: transform 0.32s var(--ease-out);
@@ -1488,11 +1524,12 @@ input {
 .skill-rim:hover {
   transform: translateY(-5px);
 }
-/* below two 282px columns the span-2 skill cards would overflow — collapse */
-@media (max-width: 640px) {
+/* wide skill tiles span two columns only on desktop — below 900px a forced
+   span would squeeze the grid to two cramped columns and clip long chips */
+@media (min-width: 900px) {
   .skill-card--span2,
   .skill-rim {
-    grid-column: auto;
+    grid-column: span 2;
   }
 }
 .skill-rim-beam {
@@ -1595,7 +1632,7 @@ input {
 }
 .cred-card--pending {
   border: 1px dashed rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.012);
+  background: var(--panel);
   overflow: visible;
 }
 .cred-org {

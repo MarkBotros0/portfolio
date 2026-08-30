@@ -18,9 +18,10 @@ All copy lives in [`src/data/portfolio.ts`](src/data/portfolio.ts) — profile, 
 featured projects, personal projects, experience, skills, and certifications.
 Adding a project is adding one object there; no component changes needed.
 
-To drop in real product screenshots, set the `image` field on a featured project
-(e.g. `image: '/shots/snurra.png'` with the file under `public/shots/`). The striped
-placeholder frame renders whenever `image` is absent.
+To drop in real product screenshots, set the `image` field on a featured or personal
+project — or `frame.image` on a timeline engagement — e.g. `image: '/shots/snurra.png'`
+with the file under `public/shots/`. The striped placeholder frame renders whenever
+the image is absent.
 
 ## Structure
 

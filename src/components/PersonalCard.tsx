@@ -14,6 +14,7 @@ export function PersonalCard({ project, open, onToggle }: PersonalCardProps) {
     <article data-reveal data-spot className="pcard">
       <Spot size={280} />
       <span className="pbadge">personal</span>
+      <div className="pshot">{project.image && <img src={project.image} alt={`${project.name} screenshot`} />}</div>
       <h3>{project.name}</h3>
       <p className="psub">{project.subtitle}</p>
       <p className="pdesc">{project.description}</p>

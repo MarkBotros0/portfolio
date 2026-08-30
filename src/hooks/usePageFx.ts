@@ -7,7 +7,6 @@ import { hoverNone, prefersReducedMotion } from './useMedia'
  *  - data-spot / data-spotlayer  → pointer-tracking card spotlight
  *  - data-tilt                   → 3D tilt (rAF-throttled)
  *  - data-magnet                 → magnetic buttons
- *  - data-cursor                 → trailing cursor glow (lerp 0.075)
  *  - data-reveal                 → scroll-in reveal with (i % 4) * 70ms stagger
  *  - data-progress / data-stack  → scroll progress bar + sticky-stack dimming
  *
@@ -20,7 +19,6 @@ export function usePageFx(pointerFx: boolean) {
     const noHover = hoverNone()
     const ac = new AbortController()
     const { signal } = ac
-    const rafs: number[] = []
     const observers: IntersectionObserver[] = []
 
     // --- spotlights ---
@@ -81,45 +79,6 @@ export function usePageFx(pointerFx: boolean) {
         )
         el.addEventListener('pointerleave', () => (el.style.transform = 'translate3d(0,0,0)'), { signal })
       })
-
-      // --- cursor glow ---
-      const dot = document.querySelector<HTMLElement>('[data-cursor]')
-      if (dot) {
-        let x = 0
-        let y = 0
-        let tx = 0
-        let ty = 0
-        let on = false
-        window.addEventListener(
-          'pointermove',
-          (e) => {
-            tx = e.clientX
-            ty = e.clientY
-            if (!on) {
-              on = true
-              x = tx
-              y = ty
-              dot.style.opacity = '1'
-            }
-          },
-          { passive: true, signal },
-        )
-        document.addEventListener('pointerleave', () => (dot.style.opacity = '0'), { signal })
-        document.addEventListener(
-          'pointerenter',
-          () => {
-            if (on) dot.style.opacity = '1'
-          },
-          { signal },
-        )
-        const loop = () => {
-          x += (tx - x) * 0.075
-          y += (ty - y) * 0.075
-          dot.style.transform = `translate3d(${x}px,${y}px,0)`
-          rafs[0] = requestAnimationFrame(loop)
-        }
-        rafs[0] = requestAnimationFrame(loop)
-      }
     }
 
     // --- scroll reveal ---
@@ -172,7 +131,6 @@ export function usePageFx(pointerFx: boolean) {
 
     return () => {
       ac.abort()
-      rafs.forEach((id) => cancelAnimationFrame(id))
       observers.forEach((io) => io.disconnect())
     }
   }, [pointerFx])

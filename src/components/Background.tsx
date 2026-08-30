@@ -1,14 +1,14 @@
-/** Fixed decorative stack: starfield, grid, aurora blobs, grain, cursor glow. */
+import { DotGrid } from './DotGrid'
+
+/** Fixed decorative stack: interactive dot grid, aurora blobs, grain. */
 export function Background() {
   return (
     <>
-      <div aria-hidden="true" className="bg-layer bg-stars" />
-      <div aria-hidden="true" className="bg-layer bg-grid" />
+      <DotGrid />
       <div aria-hidden="true" className="bg-aurora bg-aurora--violet" />
       <div aria-hidden="true" className="bg-aurora bg-aurora--blue" />
       <div aria-hidden="true" className="bg-aurora bg-aurora--pink" />
       <div aria-hidden="true" className="bg-layer bg-grain" />
-      <div data-cursor aria-hidden="true" className="cursor-glow" />
     </>
   )
 }

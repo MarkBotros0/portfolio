@@ -71,7 +71,7 @@ export const sections: Section[] = [
     navLabel: 'Projects',
     menuLabel: 'Projects',
     paletteLabel: 'Featured projects',
-    keywords: 'projects featured client work snurra spectra nannymom',
+    keywords: 'projects featured client work snurra spectra nannynow',
   },
   {
     id: 'personal',
@@ -244,7 +244,7 @@ export const featuredProjects: FeaturedProject[] = [
   {
     id: 'nanny',
     index: '03',
-    name: 'NannyMom',
+    name: 'NannyNow',
     subtitle: 'Childcare Marketplace & Care-Monitoring App',
     meta: 'freelance client engagement · 2026 – present',
     description:
@@ -276,6 +276,8 @@ export interface PersonalProject {
   subtitle: string
   description: string
   tags: string[]
+  /** Real product screenshot; the striped frame renders as fallback while absent. */
+  image?: string
   detail: {
     problem: string
     built: string
@@ -339,6 +341,11 @@ export interface Engagement {
   period: string
   title: string
   description: RichText
+  /** Presence renders the two-column layout with a compact screenshot frame
+      (striped fallback while `image` is absent). */
+  frame?: { image?: string }
+  /** Standout performance figure rendered as an accent chip below the text. */
+  stat?: { value: string; label: string }
 }
 
 export interface ExperienceEntry {
@@ -376,10 +383,10 @@ export const experience: ExperienceEntry[] = [
         period: 'Oct 2024 – Sep 2025 · remote',
         title: 'Hyperexponential — insurance, UK',
         description: [
-          'Production portfolio-underwriting model on hX Renew for a major insurer — replaced a legacy Excel process with modular Python; ported actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer, ',
-          { text: '~9× faster (13s → 1.5s)', style: 'accent' },
-          '.',
+          'Production portfolio-underwriting model on hX Renew for a major insurer — replaced a legacy Excel process with modular Python; ported actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer.',
         ],
+        frame: {},
+        stat: { value: '~9×', label: 'faster · 13s → 1.5s' },
       },
     ],
   },
@@ -389,7 +396,7 @@ export const experience: ExperienceEntry[] = [
     company: 'Freelance',
     role: 'Senior Software Engineer',
     description: [
-      'Snurra, Spectra and NannyMom — each owned end-to-end from architecture to cloud deployment. ',
+      'Snurra, Spectra and NannyNow — each owned end-to-end from architecture to cloud deployment. ',
       { text: 'See the case studies →', href: '#projects' },
     ],
   },
