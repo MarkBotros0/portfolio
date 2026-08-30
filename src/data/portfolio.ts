@@ -79,7 +79,7 @@ export const sections: Section[] = [
     navLabel: 'Personal',
     menuLabel: 'Personal',
     paletteLabel: 'Personal projects',
-    keywords: 'personal projects egx jpc space money manager',
+    keywords: 'personal projects egx jpc space money manager echofold',
   },
   {
     id: 'experience',
@@ -131,9 +131,9 @@ export const highlights: Highlight[] = [
   {
     span: 2,
     accentWash: true,
-    value: 6,
+    value: 7,
     label: 'products shipped end‑to‑end',
-    note: 'Three client platforms and three of my own, each taken from architecture to production.',
+    note: 'Three client platforms and four of my own, each taken from architecture to production.',
   },
   { value: 4, suffix: '+', label: 'years of experience' },
   { prefix: '×', value: 2, label: 'AWS certified' },
@@ -198,22 +198,22 @@ export const featuredProjects: FeaturedProject[] = [
     index: '01',
     name: 'Snurra',
     subtitle: 'Automated Website Quality-Audit Platform',
-    meta: 'freelance client engagement · 2026 – present',
+    meta: 'freelance · Efficient Vision · 2026 – present',
     description:
-      'SaaS platform that crawls entire websites and runs a catalog of 200+ automated checks across 6 quality pillars — accessibility (WCAG), SEO, performance, content quality and more — then scores results into dashboards with issue tracking, scheduled runs, reports, and alerts.',
+      'Multi-tenant, queue-driven SaaS platform that crawls entire websites and runs a catalog of 200+ automated checks across 6 quality pillars — accessibility (WCAG), SEO, security, performance and more — rolling results up into a Website Health Index with dashboards, issue tracking, scheduled runs, reports, and alerts.',
     tags: ['TypeScript', 'Node.js', 'Next.js', 'PostgreSQL', 'Playwright', 'Azure', 'Terraform'],
     screenshotCaption: 'screenshot slot — audit dashboard',
     detail: {
       problem:
         'Quality reviews were manual, inconsistent, and impossible to repeat at site scale — teams had no continuous, comparable view of accessibility, SEO, and performance regressions.',
       built:
-        'The distributed audit engine — Node.js + TypeScript worker running Playwright browsers, Postgres-backed job queue (pg-boss), Drizzle ORM over a 30+ table schema — plus the analytics dashboard (Next.js 16, React 19, Tailwind v4, NextAuth) and cloud infrastructure as code (Terraform on Azure: Container Apps, private Postgres, VNet) with GitHub Actions CI/CD.',
+        'The distributed audit engine — Node.js + TypeScript workers running Playwright browsers over a Postgres-backed job queue (pg-boss) — with a spec-governed penalty-scoring engine rolling severity deductions into category, pillar, and Website Health Index scores per mobile/desktop strategy; a Claude-powered audit engine with versioned prompts and evidence quoting; 7 external vendors (PageSpeed, ImmuniWeb, Site24x7…) behind a unified adapter model; and Terraform-provisioned Azure Container Apps with KEDA queue-depth autoscaling and GitHub Actions CI/CD.',
       role: 'Sole engineer. Owned end-to-end from architecture to cloud deployment.',
       groups: [
         { label: 'Frontend', items: ['Next.js 16', 'React 19', 'Tailwind v4'] },
-        { label: 'Backend', items: ['Node.js', 'TypeScript', 'Playwright', 'pg-boss', 'NextAuth'] },
+        { label: 'Backend', items: ['Node.js', 'TypeScript', 'Playwright', 'pg-boss', 'Claude (audit engine)'] },
         { label: 'Data', items: ['PostgreSQL', 'Drizzle ORM'] },
-        { label: 'Infra', items: ['Azure Container Apps', 'Terraform', 'GitHub Actions'] },
+        { label: 'Infra', items: ['Azure Container Apps', 'KEDA autoscaling', 'Terraform', 'GitHub Actions'] },
       ],
     },
   },
@@ -222,20 +222,20 @@ export const featuredProjects: FeaturedProject[] = [
     index: '02',
     name: 'Spectra',
     subtitle: 'AI-Powered Design & QA Suite',
-    meta: 'freelance client engagement · 2026 – present',
+    meta: 'freelance · Efficient Vision · 2026 – present',
     description:
-      'QA platform that compares live websites against their Figma designs pixel-by-pixel and uses AI vision (Claude) to produce human-readable discrepancy reports with suggested CSS fixes — expanded into a multi-product suite: site auditing, crawling, maintenance monitoring, and email-template QA across email clients.',
+      'Design-QA and web-automation platform unifying 6 tools: Claude Vision QA validating live pages against Figma designs, Figma-to-code generation, site auditing (later productized as Snurra), a BFS site crawler mapping up to 25K pages per run, cron-driven visual-regression maintenance across 5 browser engines × 4 viewports, and a dev-skill catalog for the company’s developers.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Playwright', 'AI integration (Claude)'],
     screenshotCaption: 'screenshot slot — pixel-diff report',
     detail: {
       problem:
-        'Design-to-build drift was caught by eye, late, and described in ways developers could not act on — and the same manual review had to be repeated for every page, breakpoint, and email client.',
+        'Design-to-build drift was caught by eye, late, and described in ways developers could not act on — and the same manual review had to be repeated for every page, breakpoint, and browser.',
       built:
-        'The full-stack Next.js application — multi-browser screenshot & pixel-diff pipeline (Playwright + pixelmatch), AI analysis integration (Anthropic SDK), 20-model Prisma/PostgreSQL data layer, external REST API with API-key auth, scheduled monitoring jobs, Excel report exports.',
+        'The full-stack Next.js application — a Claude Vision pipeline with parallel layout/typography/color analysis, crop-and-verify passes, prompt caching and token/cost telemetry; a Figma MCP-powered code generator with streaming Claude calls and a visual-diff self-check loop; a swappable-probe BFS crawler with robots.txt and sitemap auto-discovery; scheduled visual-regression monitoring with Claude-written HTML report emails; and all 60 prompts managed as versioned engineering artifacts.',
       role: 'Sole engineer. Owned end-to-end from architecture to cloud deployment.',
       groups: [
         { label: 'Frontend', items: ['Next.js', 'React', 'Tailwind'] },
-        { label: 'Backend', items: ['TypeScript', 'Playwright + pixelmatch', 'Anthropic SDK', 'NextAuth'] },
+        { label: 'Backend', items: ['TypeScript', 'Playwright + pixelmatch', 'Anthropic SDK', 'Figma MCP'] },
         { label: 'Data', items: ['Prisma (20 models)', 'PostgreSQL'] },
         { label: 'Infra', items: ['Scheduled jobs', 'REST API + API keys'] },
       ],
@@ -246,25 +246,25 @@ export const featuredProjects: FeaturedProject[] = [
     index: '03',
     name: 'NannyNow',
     subtitle: 'Childcare Marketplace & Care-Monitoring App',
-    meta: 'freelance client engagement · 2026 – present',
+    meta: 'freelance · AIgorithms · 2026 – present',
     description:
-      'Dual-sided mobile marketplace connecting mothers with vetted nannies: verified on-demand booking, live care visibility (camera + real-time activity logs), payments, and a local-mom community with events and a peer-to-peer marketplace.',
-    tags: ['React Native', 'Expo', 'Express', 'Prisma', 'Redis', 'AWS CDK', 'Payments'],
+      'On-demand nanny-booking service spanning mobile and web: map/radius nanny discovery, broadcast booking requests with first-to-accept claiming, PIN-gated check-in, live care logs and live camera monitoring, payments with refunds, plus promo codes, prepaid hour packages, rewards, and referrals.',
+    tags: ['React Native', 'Expo', 'Express', 'Prisma', 'PostGIS', 'Paymob', 'Turborepo'],
     screenshotCaption: 'screenshot slot — parent & nanny app',
     detail: {
       problem:
         'Parents booked childcare on trust alone, with no vetting, no visibility once care began, and no safe way to pay or resolve issues — and nannies had no reliable channel to find work.',
       built:
-        'The complete product in a Turborepo monorepo — React Native (Expo) mobile app with separate parent and nanny experiences, Express + TypeScript backend (Prisma/PostgreSQL ~37 models, Redis rate limiting), Firebase auth & push, payment-gateway integration with refunds and promo codes, referrals & rewards, real-time chat, React admin console with analytics, AWS infrastructure via CDK, and layered test suites (unit, integration, E2E) on GitHub Actions.',
+        'The complete product in a Turborepo monorepo — Expo/React Native mobile app (64 screens), React web admin console, and Express + Prisma backend (PostgreSQL + PostGIS) with shared Zod schemas as one typed source of truth; PostGIS geo-search and first-to-accept booking, live care logs and RTSP camera monitoring, Paymob hosted checkout with HMAC-verified webhooks, reconciliation and refunds, FCM push, and ~940 automated tests across 4 tiers (unit, integration with real PostGIS and Firebase emulator, Playwright admin E2E, Maestro mobile E2E).',
       role: 'Sole engineer. Owned end-to-end from architecture to cloud deployment.',
       groups: [
-        { label: 'Frontend & mobile', items: ['React Native (Expo)', 'React admin console'] },
+        { label: 'Frontend & mobile', items: ['React Native (Expo) — 64 screens', 'React admin console'] },
         {
           label: 'Backend',
-          items: ['Express + TypeScript', 'Firebase auth & push', 'Payments & refunds', 'Real-time chat'],
+          items: ['Express + TypeScript', 'Shared Zod schemas', 'Paymob + HMAC webhooks', 'Firebase auth & FCM push'],
         },
-        { label: 'Data', items: ['Prisma (~37 models)', 'PostgreSQL', 'Redis'] },
-        { label: 'Infra', items: ['AWS CDK', 'Turborepo', 'GitHub Actions'] },
+        { label: 'Data', items: ['Prisma', 'PostgreSQL + PostGIS', 'Redis'] },
+        { label: 'Infra', items: ['Turborepo', 'GitHub Actions', '~940 tests · 4 tiers'] },
       ],
     },
   },
@@ -294,11 +294,12 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Mobile-first web app for Egyptian retail investors learning to analyze stocks on the Egyptian Exchange (EGX). A composite scoring engine rates each stock across 8 weighted categories with market-regime awareness; every feature carries a teaching layer explaining the “why”.',
     tags: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
+    image: '/shots/egx-dashboard.png',
     detail: {
       problem:
         'Retail investors on the EGX get signals with no explanation, so they cannot learn to judge a stock themselves.',
       built:
-        'Python FastAPI backend (pandas/NumPy indicator library — RSI, MACD, Bollinger and more; Postgres on Neon; JWT auth) + Next.js frontend with Recharts; portfolio tracker with risk dashboard, correlation heatmap and Monte Carlo projections; deployed on Vercel with a daily data-refresh cron.',
+        'Python FastAPI backend (indicators implemented from first principles with pandas/NumPy — RSI, MACD, Bollinger and more; Postgres on Neon; JWT auth) + Next.js frontend with Recharts; portfolio tracker with risk dashboard, correlation heatmap and Monte Carlo projections; scoring engine validated with a walk-forward backtest over 2007–2026 data (36K+ symbol-dates); deployed on Vercel with a daily data-refresh cron.',
       stack: ['pandas / NumPy', 'React', 'Recharts', 'Vercel'],
       role: 'Solo — product, backend, frontend, deployment.',
     },
@@ -310,11 +311,12 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Full portal for a student community running seasonal discipleship courses: five scoped roles (super, admin, leader, mentor, student), season/group/session management, and student well-being tracking.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
+    image: '/shots/jpc-space-group.png',
     detail: {
       problem:
         'Attendance, assignments, and pastoral notes lived in spreadsheets and chat threads, with no way to scope who could see what.',
       built:
-        'Next.js 16 + React 19 app with Server Actions, Prisma/PostgreSQL, Auth.js v5 with permission scopes baked into the JWT for zero-DB permission checks; attendance with automatic at-risk flags, assignment submission & review workflow, QR check-in, session calendar, engagement notes with visibility tiers, reports with CSV export. Currently being rewritten as a Turborepo monorepo with an Expo/React Native mobile app and Express backend.',
+        'Next.js 16 + React 19 app with Server Actions, Prisma/PostgreSQL, Auth.js v5 with 5-role scoped access enforced at middleware and page level — verified by an automated permission-matrix script; QR-code attendance check-in with automatic at-risk flags, interactive video quizzes, assignment submission & review workflow, engagement scoring with visibility tiers, exportable reports. Being rebuilt mobile-first as an Expo/React Native + Express monorepo with shared Zod contracts and mutation-tested integration coverage.',
       stack: ['React 19', 'PostgreSQL', 'Tailwind', 'React Native (v2)'],
       role: 'Solo — product, backend, frontend, deployment.',
     },
@@ -330,8 +332,24 @@ export const personalProjects: PersonalProject[] = [
       problem:
         'Shared group money was tracked on paper and trust, with no receipts, no balances, and no record of who changed what.',
       built:
-        'Next.js 16 app with Prisma/PostgreSQL and NextAuth v5; receipt uploads (Cloudinary + client-side image compression), balances/transfers, scheduled PDF & Excel export jobs, an audit log on every mutation with soft-delete throughout, Vitest test suite.',
+        'Next.js 16 app with Prisma/PostgreSQL and email-OTP auth; financial-grade safeguards — audit logging on every mutation, password-verified income edits, soft deletes, per-field access levels; tiered subscription pricing with sync previews, bulk member CSV import/export, compressed receipt uploads (Cloudinary), cron-scheduled PDF & Excel email reports; 70 test files running in GitHub Actions CI.',
       stack: ['TypeScript', 'NextAuth v5', 'Vitest'],
+      role: 'Solo — product, backend, frontend, deployment.',
+    },
+  },
+  {
+    id: 'echofold',
+    name: 'Echofold',
+    subtitle: 'Social-Media Intelligence SaaS',
+    description:
+      'Multi-tenant analytics and publishing platform for marketing agencies across Facebook, Instagram, and TikTok: org/brand workspaces with subscription limits, competitor analysis, a content calendar with approvals, and client-facing reports.',
+    tags: ['Python', 'FastAPI', 'SQLAlchemy', 'Next.js'],
+    detail: {
+      problem:
+        'Agencies juggled per-platform dashboards and spreadsheets, with no unified view of brand performance, competitors, or the publishing pipeline they could share with clients.',
+      built:
+        'FastAPI + SQLAlchemy backend and Next.js frontend; org/brand workspaces with subscription limits, async competitor-analysis jobs, content calendar with approval workflow, client-facing reports; all derived analytics verified against a marketing expert’s benchmark workbook via an automated oracle test that fails on divergence.',
+      stack: ['PostgreSQL', 'React', 'Async jobs'],
       role: 'Solo — product, backend, frontend, deployment.',
     },
   },
@@ -383,7 +401,7 @@ export const experience: ExperienceEntry[] = [
         period: 'Oct 2024 – Sep 2025 · remote',
         title: 'Hyperexponential — insurance, UK',
         description: [
-          'Production portfolio-underwriting model on hX Renew for a major insurer — replaced a legacy Excel process with modular Python; ported actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer.',
+          'Production portfolio-underwriting model on hX Renew for Beazley — replaced a legacy Excel process with modular Python; ported actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer.',
         ],
         frame: {},
         stat: { value: '~9×', label: 'faster · 13s → 1.5s' },
@@ -396,7 +414,7 @@ export const experience: ExperienceEntry[] = [
     company: 'Freelance',
     role: 'Senior Software Engineer',
     description: [
-      'Snurra, Spectra and NannyNow — each owned end-to-end from architecture to cloud deployment. ',
+      'Snurra and Spectra for Efficient Vision, NannyNow for AIgorithms — each owned end-to-end from architecture to cloud deployment. ',
       { text: 'See the case studies →', href: '#projects' },
     ],
   },
@@ -460,7 +478,7 @@ export const skills: SkillGroup[] = [
     num: '03',
     title: 'Databases & data',
     primary: ['PostgreSQL', 'MySQL', 'Oracle'],
-    secondary: ['MongoDB', 'SQL tuning', 'indexing & partitioning', 'Pandas / Polars / NumPy', 'ETL pipelines'],
+    secondary: ['MongoDB', 'pg-boss', 'SQL tuning', 'indexing & partitioning', 'Pandas / Polars / NumPy', 'ETL pipelines'],
   },
   {
     num: '04',
@@ -480,12 +498,19 @@ export const skills: SkillGroup[] = [
     conic: true,
     primaryStyle: 'bright',
     primary: ['LLM tool integrations (Claude, Codex, Gemini)'],
-    secondary: ['MCP servers', 'agentic development workflows', 'AI-vision analysis pipelines'],
+    secondary: [
+      'MCP servers',
+      'agentic development workflows',
+      'skills creation',
+      'context optimization',
+      'GitHub automation',
+      'AI-vision analysis pipelines',
+    ],
   },
   {
     num: '06',
     title: 'Also',
-    secondary: ['Playwright', 'Git', 'Jira', 'Azure DevOps', 'Swagger', 'Postman'],
+    secondary: ['Playwright', 'Git', 'Jira', 'Azure DevOps', 'Swagger', 'Postman', 'Bruno'],
   },
 ]
 
@@ -505,7 +530,7 @@ export const certifications: Credential[] = [
   { org: 'AWS · Nov 2023', title: 'Cloud Practitioner' },
   { org: 'AWS · expected Aug 2026', title: 'Solutions Architect', pending: true },
   { org: 'Cairo University · 2017–2022', title: 'B.S. Civil Engineering', note: 'GPA 3.81/4 — ranked 2nd' },
-  { org: 'Languages', body: 'Arabic (native) · English (fluent) · German (B1)', static: true },
+  { org: 'Languages', body: 'Arabic (native) · English (fluent) · German (Goethe B1)', static: true },
 ]
 
 export const contact = {

@@ -106,7 +106,7 @@ export default function App({ accent, pointerFx = true, projectDetailsOpen = fal
               eyebrow="Featured projects"
               heading="Client work, owned end to end"
               headingMaxCh={22}
-              sub="Freelance engagements: architecture, backend, frontend, and cloud infrastructure. Client names withheld."
+              sub="Freelance engagements: architecture, backend, frontend, and cloud infrastructure."
             />
             <div className="case-stack">
               {featuredProjects.map((p, i) => (
