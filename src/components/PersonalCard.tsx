@@ -11,7 +11,7 @@ export function PersonalCard({ project, open, onToggle }: PersonalCardProps) {
   const { detail } = project
 
   return (
-    <article data-reveal data-spot className="pcard">
+    <article data-reveal data-spot data-dots-avoid className="pcard">
       <Spot size={280} />
       <span className="pbadge">personal</span>
       <div className="pshot">{project.image && <img src={project.image} alt={`${project.name} screenshot`} />}</div>

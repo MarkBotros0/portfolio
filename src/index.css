@@ -1124,7 +1124,7 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: clamp(22px, 3vw, 36px);
-  background: #08080d;
+  background: rgba(0, 0, 0, 0.26);
   animation: rise 0.45s var(--ease-out);
 }
 .detail-col {
@@ -1182,7 +1182,7 @@ input {
   overflow: hidden;
   border: 1px dashed rgba(255, 255, 255, 0.16);
   border-radius: 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0.022)), var(--panel);
+  background: rgba(255, 255, 255, 0.022);
   padding: 22px;
   display: flex;
   flex-direction: column;
@@ -1407,7 +1407,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 17px 19px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01)), var(--panel);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01));
   transition: border-color 0.3s ease;
 }
 .xp-card:hover {
@@ -1632,7 +1632,7 @@ input {
 }
 .cred-card--pending {
   border: 1px dashed rgba(255, 255, 255, 0.16);
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.012);
   overflow: visible;
 }
 .cred-org {

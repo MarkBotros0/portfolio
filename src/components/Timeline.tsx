@@ -34,7 +34,7 @@ export function Timeline() {
               {entry.engagements && (
                 <ul className="xp-engagements">
                   {entry.engagements.map((eng) => (
-                    <li key={eng.title} data-spot className="xp-card">
+                    <li key={eng.title} data-spot data-dots-avoid className="xp-card">
                       <Spot size={300} color="var(--a-faint)" />
                       {eng.frame ? (
                         <div className="xp-card-grid">

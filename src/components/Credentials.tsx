@@ -7,7 +7,7 @@ export function Credentials() {
       {certifications.map((c) => {
         if (c.pending) {
           return (
-            <div key={c.org} data-reveal className="cred-card cred-card--pending">
+            <div key={c.org} data-reveal data-dots-avoid className="cred-card cred-card--pending">
               <p className="cred-org cred-org--muted">{c.org}</p>
               <h3 className="cred-title cred-title--muted">{c.title}</h3>
             </div>
