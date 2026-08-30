@@ -1,4 +1,5 @@
 import type { FeaturedProject } from '../data/portfolio'
+import { Slideshow } from './Slideshow'
 import { Spot } from './Spot'
 
 interface ProjectCaseProps {
@@ -17,9 +18,12 @@ export function ProjectCase({ project, position, open, onToggle }: ProjectCasePr
       <Spot size={480} />
       <div className="case-grid">
         <div data-tilt className="shot">
-          {project.image && <img src={project.image} alt={`${project.name} screenshot`} />}
+          {project.images?.length ? (
+            <Slideshow images={project.images} alt={`${project.name} screenshot`} />
+          ) : (
+            <span className="shot-cap">{project.screenshotCaption}</span>
+          )}
           <span className="shot-idx">{project.index}</span>
-          {!project.image && <span className="shot-cap">{project.screenshotCaption}</span>}
         </div>
         <div className="case-col">
           <span className="case-pill">{project.meta}</span>

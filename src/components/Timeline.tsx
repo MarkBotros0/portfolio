@@ -1,5 +1,6 @@
 import { experience } from '../data/portfolio'
 import { RichText } from './RichText'
+import { Slideshow } from './Slideshow'
 import { Spot } from './Spot'
 
 export function Timeline() {
@@ -52,7 +53,9 @@ export function Timeline() {
                             )}
                           </div>
                           <div className="xp-shot">
-                            {eng.frame.image && <img src={eng.frame.image} alt={`${eng.title} screenshot`} />}
+                            {eng.frame.images?.length ? (
+                              <Slideshow images={eng.frame.images} alt={`${eng.title} screenshot`} />
+                            ) : null}
                           </div>
                         </div>
                       ) : (

@@ -1,4 +1,5 @@
 import type { PersonalProject } from '../data/portfolio'
+import { Slideshow } from './Slideshow'
 import { Spot } from './Spot'
 
 interface PersonalCardProps {
@@ -14,7 +15,9 @@ export function PersonalCard({ project, open, onToggle }: PersonalCardProps) {
     <article data-reveal data-spot data-dots-avoid className="pcard">
       <Spot size={280} />
       <span className="pbadge">personal</span>
-      <div className="pshot">{project.image && <img src={project.image} alt={`${project.name} screenshot`} />}</div>
+      <div className="pshot">
+        {project.images?.length ? <Slideshow images={project.images} alt={`${project.name} screenshot`} /> : null}
+      </div>
       <h3>{project.name}</h3>
       <p className="psub">{project.subtitle}</p>
       <p className="pdesc">{project.description}</p>

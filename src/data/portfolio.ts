@@ -181,8 +181,9 @@ export interface FeaturedProject {
   meta: string
   description: string
   tags: string[]
-  /** Real product screenshot; the striped frame renders as fallback while absent. */
-  image?: string
+  /** Real product screenshots — auto-rotating slideshow when more than one;
+      the striped frame renders as fallback while absent. */
+  images?: string[]
   screenshotCaption: string
   detail: {
     problem: string
@@ -276,8 +277,9 @@ export interface PersonalProject {
   subtitle: string
   description: string
   tags: string[]
-  /** Real product screenshot; the striped frame renders as fallback while absent. */
-  image?: string
+  /** Real product screenshots — auto-rotating slideshow when more than one;
+      the striped frame renders as fallback while absent. */
+  images?: string[]
   detail: {
     problem: string
     built: string
@@ -294,7 +296,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Mobile-first web app for Egyptian retail investors learning to analyze stocks on the Egyptian Exchange (EGX). A composite scoring engine rates each stock across 8 weighted categories with market-regime awareness; every feature carries a teaching layer explaining the “why”.',
     tags: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
-    image: '/shots/egx-dashboard.png',
+    images: ['/shots/egx-dashboard.png', '/shots/egx-stock.png'],
     detail: {
       problem:
         'Retail investors on the EGX get signals with no explanation, so they cannot learn to judge a stock themselves.',
@@ -311,7 +313,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Full portal for a student community running seasonal discipleship courses: five scoped roles (super, admin, leader, mentor, student), season/group/session management, and student well-being tracking.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
-    image: '/shots/jpc-space-group.png',
+    images: ['/shots/jpc-space-group.png'],
     detail: {
       problem:
         'Attendance, assignments, and pastoral notes lived in spreadsheets and chat threads, with no way to scope who could see what.',
@@ -360,8 +362,8 @@ export interface Engagement {
   title: string
   description: RichText
   /** Presence renders the two-column layout with a compact screenshot frame
-      (striped fallback while `image` is absent). */
-  frame?: { image?: string }
+      (striped fallback while `images` is absent; slideshow when several). */
+  frame?: { images?: string[] }
   /** Standout performance figure rendered as an accent chip below the text. */
   stat?: { value: string; label: string }
 }
