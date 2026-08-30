@@ -49,7 +49,7 @@ function TerminalCard() {
 export function Hero() {
   return (
     <section aria-label="Introduction" className="hero">
-      <div>
+      <div data-dots-avoid>
         <p className="status-pill">
           <span className="status-dot" />
           {profile.status}

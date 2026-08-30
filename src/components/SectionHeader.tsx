@@ -11,7 +11,7 @@ interface SectionHeaderProps {
 export function SectionHeader({ eyebrow, heading, headingMaxCh, sub }: SectionHeaderProps) {
   const style: CSSProperties | undefined = headingMaxCh ? { maxWidth: `${headingMaxCh}ch` } : undefined
   return (
-    <div className="section-head">
+    <div className="section-head" data-dots-avoid>
       <div className="eyebrow">
         <span className="rule" />
         <span className="label">{eyebrow}</span>

@@ -20,12 +20,14 @@ export function Timeline() {
           <li key={entry.company} className={`xp-item${last ? ' xp-item--last' : ''}${spine}`}>
             <span aria-hidden="true" className={`xp-dot${dot}`} />
             <div data-reveal>
-              <p className={`xp-period${entry.current ? ' xp-period--current' : ''}`}>{entry.period}</p>
-              <h3 className="xp-h3">
+              <p data-dots-avoid className={`xp-period${entry.current ? ' xp-period--current' : ''}`}>
+                {entry.period}
+              </p>
+              <h3 data-dots-avoid className="xp-h3">
                 {entry.company} <span className="role">— {entry.role}</span>
               </h3>
               {entry.description && (
-                <p className="xp-desc">
+                <p data-dots-avoid className="xp-desc">
                   <RichText segments={entry.description} />
                 </p>
               )}
