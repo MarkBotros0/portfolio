@@ -204,6 +204,13 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       'Multi-tenant, queue-driven SaaS platform that crawls entire websites and runs a catalog of 200+ automated checks across 6 quality pillars — accessibility (WCAG), SEO, security, performance and more — rolling results up into a Website Health Index with dashboards, issue tracking, scheduled runs, reports, and alerts.',
     tags: ['TypeScript', 'Node.js', 'Next.js', 'PostgreSQL', 'Playwright', 'Azure', 'Terraform'],
+    images: [
+      '/shots/snurra-dashboard.png',
+      '/shots/snurra-run-overview.png',
+      '/shots/snurra-accessibility.png',
+      '/shots/snurra-check-catalog.png',
+      '/shots/snurra-portfolio.png',
+    ],
     screenshotCaption: 'screenshot slot — audit dashboard',
     detail: {
       problem:
