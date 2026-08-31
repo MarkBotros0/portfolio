@@ -205,11 +205,11 @@ export const featuredProjects: FeaturedProject[] = [
       'Multi-tenant, queue-driven SaaS platform that crawls entire websites and runs a catalog of 200+ automated checks across 6 quality pillars — accessibility (WCAG), SEO, security, performance and more — rolling results up into a Website Health Index with dashboards, issue tracking, scheduled runs, reports, and alerts.',
     tags: ['TypeScript', 'Node.js', 'Next.js', 'PostgreSQL', 'Playwright', 'Azure', 'Terraform'],
     images: [
-      '/shots/snurra-dashboard.png',
-      '/shots/snurra-run-overview.png',
-      '/shots/snurra-accessibility.png',
-      '/shots/snurra-check-catalog.png',
-      '/shots/snurra-portfolio.png',
+      '/shots/snurra-dashboard.webp',
+      '/shots/snurra-run-overview.webp',
+      '/shots/snurra-accessibility.webp',
+      '/shots/snurra-check-catalog.webp',
+      '/shots/snurra-portfolio.webp',
     ],
     screenshotCaption: 'screenshot slot — audit dashboard',
     detail: {
@@ -235,6 +235,14 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       'Design-QA and web-automation platform unifying 6 tools: Claude Vision QA validating live pages against Figma designs, Figma-to-code generation, site auditing (later productized as Snurra), a BFS site crawler mapping up to 25K pages per run, cron-driven visual-regression maintenance across 5 browser engines × 4 viewports, and a dev-skill catalog for the company’s developers.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Playwright', 'AI integration (Claude)'],
+    images: [
+      '/shots/spectra-tools.webp',
+      '/shots/spectra-qa-diff.webp',
+      '/shots/spectra-figma-to-code.webp',
+      '/shots/spectra-site-audit.webp',
+      '/shots/spectra-crawler.webp',
+      '/shots/spectra-skills.webp',
+    ],
     screenshotCaption: 'screenshot slot — pixel-diff report',
     detail: {
       problem:
@@ -305,11 +313,11 @@ export const personalProjects: PersonalProject[] = [
       'Mobile-first web app for Egyptian retail investors learning to analyze stocks on the Egyptian Exchange (EGX). A composite scoring engine rates each stock across 8 weighted categories with market-regime awareness; every feature carries a teaching layer explaining the “why”.',
     tags: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
     images: [
-      '/shots/egx-dashboard.png',
-      '/shots/egx-stock.png',
-      '/shots/egx-portfolio.png',
-      '/shots/egx-compare.png',
-      '/shots/egx-learn.png',
+      '/shots/egx-dashboard.webp',
+      '/shots/egx-stock.webp',
+      '/shots/egx-portfolio.webp',
+      '/shots/egx-compare.webp',
+      '/shots/egx-learn.webp',
     ],
     detail: {
       problem:
@@ -328,9 +336,9 @@ export const personalProjects: PersonalProject[] = [
       'Full portal for a student community running seasonal discipleship courses: five scoped roles (super, admin, leader, mentor, student), season/group/session management, and student well-being tracking.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
     images: [
-      '/shots/jpc-space-group.png',
-      '/shots/jpc-space-season.png',
-      '/shots/jpc-space-assignments.png',
+      '/shots/jpc-space-group.webp',
+      '/shots/jpc-space-season.webp',
+      '/shots/jpc-space-assignments.webp',
     ],
     detail: {
       problem:
@@ -349,11 +357,11 @@ export const personalProjects: PersonalProject[] = [
       'Installable PWA for seasonal group finances: members contribute income and record expenses per season, admins manage members and subscriptions, with role-scoped access throughout.',
     tags: ['Next.js', 'Prisma', 'PWA', 'Cloudinary'],
     images: [
-      '/shots/jpc-money-dashboard.png',
-      '/shots/jpc-money-subscriptions.png',
-      '/shots/jpc-money-expenses.png',
-      '/shots/jpc-money-income.png',
-      '/shots/jpc-money-users.png',
+      '/shots/jpc-money-dashboard.webp',
+      '/shots/jpc-money-subscriptions.webp',
+      '/shots/jpc-money-expenses.webp',
+      '/shots/jpc-money-income.webp',
+      '/shots/jpc-money-users.webp',
     ],
     detail: {
       problem:
@@ -372,10 +380,10 @@ export const personalProjects: PersonalProject[] = [
       'Multi-tenant analytics and publishing platform for marketing agencies across Facebook, Instagram, and TikTok: org/brand workspaces with subscription limits, competitor analysis, a content calendar with approvals, and client-facing reports.',
     tags: ['Python', 'FastAPI', 'SQLAlchemy', 'Next.js'],
     images: [
-      '/shots/echofold-landing.png',
-      '/shots/echofold-dashboard.png',
-      '/shots/echofold-competitors.png',
-      '/shots/echofold-content.png',
+      '/shots/echofold-landing.webp',
+      '/shots/echofold-dashboard.webp',
+      '/shots/echofold-competitors.webp',
+      '/shots/echofold-content.webp',
     ],
     detail: {
       problem:
