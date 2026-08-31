@@ -98,9 +98,17 @@ export default function App({ accent, pointerFx = true, projectDetailsOpen = fal
         <Marquee />
 
         <div className="shell">
-          <section id="projects" className="section section--first">
+          <section id="experience" className="section section--first">
             <span aria-hidden="true" className="ghost-num ghost-num--offset">
               01
+            </span>
+            <SectionHeader eyebrow="Experience" heading="Four years, five teams, one thread" headingMaxCh={22} />
+            <Timeline />
+          </section>
+
+          <section id="projects" className="section">
+            <span aria-hidden="true" className="ghost-num">
+              02
             </span>
             <SectionHeader
               eyebrow="Featured projects"
@@ -117,7 +125,7 @@ export default function App({ accent, pointerFx = true, projectDetailsOpen = fal
 
           <section id="personal" className="section">
             <span aria-hidden="true" className="ghost-num">
-              02
+              03
             </span>
             <SectionHeader
               eyebrow="Personal projects"
@@ -132,19 +140,11 @@ export default function App({ accent, pointerFx = true, projectDetailsOpen = fal
             </div>
           </section>
 
-          <section id="experience" className="section">
-            <span aria-hidden="true" className="ghost-num">
-              03
-            </span>
-            <SectionHeader eyebrow="Experience" heading="Four years, five teams, one thread" headingMaxCh={22} />
-            <Timeline />
-          </section>
-
           <section id="skills" className="section">
             <span aria-hidden="true" className="ghost-num">
               04
             </span>
-            <SectionHeader eyebrow="Skills" heading="The stack I work in" />
+            <SectionHeader eyebrow="Skills" heading="The stack I build with" />
             <SkillsGrid />
           </section>
 

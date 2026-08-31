@@ -66,35 +66,35 @@ export interface Section {
 /** The six sections; the first five appear in the navbar, all six in menu/palette/rail. */
 export const sections: Section[] = [
   {
-    id: 'projects',
+    id: 'experience',
     num: '01',
+    navLabel: 'Experience',
+    menuLabel: 'Experience',
+    paletteLabel: 'Experience Timeline',
+    keywords: 'experience deloitte itworx qoodz tc egypt freelance timeline',
+  },
+  {
+    id: 'projects',
+    num: '02',
     navLabel: 'Projects',
     menuLabel: 'Projects',
-    paletteLabel: 'Featured projects',
+    paletteLabel: 'Featured Projects',
     keywords: 'projects featured client work snurra spectra nannynow',
   },
   {
     id: 'personal',
-    num: '02',
+    num: '03',
     navLabel: 'Personal',
     menuLabel: 'Personal',
-    paletteLabel: 'Personal projects',
+    paletteLabel: 'Personal Projects',
     keywords: 'personal projects egx jpc space money manager echofold',
-  },
-  {
-    id: 'experience',
-    num: '03',
-    navLabel: 'Experience',
-    menuLabel: 'Experience',
-    paletteLabel: 'Experience timeline',
-    keywords: 'experience deloitte itworx qoodz tc egypt freelance timeline',
   },
   {
     id: 'skills',
     num: '04',
     navLabel: 'Skills',
     menuLabel: 'Skills',
-    paletteLabel: 'Skills & stack',
+    paletteLabel: 'Skills & Stack',
     keywords: 'skills stack java spring boot typescript python aws azure',
   },
   {
@@ -102,7 +102,7 @@ export const sections: Section[] = [
     num: '05',
     navLabel: 'Certs',
     menuLabel: 'Certifications',
-    paletteLabel: 'Certifications & education',
+    paletteLabel: 'Certifications & Education',
     keywords: 'certifications education aws degree languages',
   },
   {
@@ -142,7 +142,7 @@ export const highlights: Highlight[] = [
     value: 6,
     suffix: '+',
     label: 'industries served',
-    chips: ['banking', 'insurance', 'payments', 'F&B', 'education', 'agriculture'],
+    chips: ['insurance', 'financial services', 'F&B', 'software lifecycle', 'education', 'agriculture'],
   },
   { text: ['web + mobile', '+ cloud'], label: 'full delivery scope' },
 ]
@@ -156,9 +156,10 @@ export const marquee: string[] = [
   'React',
   'React Native',
   'Python',
-  'FastAPI',
+  'Django',
   'PostgreSQL',
-  'Redis',
+  'Oracle',
+  'MongoDB',
   'Kafka',
   'Docker',
   'Kubernetes',
@@ -296,7 +297,13 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Mobile-first web app for Egyptian retail investors learning to analyze stocks on the Egyptian Exchange (EGX). A composite scoring engine rates each stock across 8 weighted categories with market-regime awareness; every feature carries a teaching layer explaining the “why”.',
     tags: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL'],
-    images: ['/shots/egx-dashboard.png', '/shots/egx-stock.png'],
+    images: [
+      '/shots/egx-dashboard.png',
+      '/shots/egx-stock.png',
+      '/shots/egx-portfolio.png',
+      '/shots/egx-compare.png',
+      '/shots/egx-learn.png',
+    ],
     detail: {
       problem:
         'Retail investors on the EGX get signals with no explanation, so they cannot learn to judge a stock themselves.',
@@ -313,7 +320,11 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Full portal for a student community running seasonal discipleship courses: five scoped roles (super, admin, leader, mentor, student), season/group/session management, and student well-being tracking.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
-    images: ['/shots/jpc-space-group.png'],
+    images: [
+      '/shots/jpc-space-group.png',
+      '/shots/jpc-space-season.png',
+      '/shots/jpc-space-assignments.png',
+    ],
     detail: {
       problem:
         'Attendance, assignments, and pastoral notes lived in spreadsheets and chat threads, with no way to scope who could see what.',
@@ -330,6 +341,13 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Installable PWA for seasonal group finances: members contribute income and record expenses per season, admins manage members and subscriptions, with role-scoped access throughout.',
     tags: ['Next.js', 'Prisma', 'PWA', 'Cloudinary'],
+    images: [
+      '/shots/jpc-money-dashboard.png',
+      '/shots/jpc-money-subscriptions.png',
+      '/shots/jpc-money-expenses.png',
+      '/shots/jpc-money-income.png',
+      '/shots/jpc-money-users.png',
+    ],
     detail: {
       problem:
         'Shared group money was tracked on paper and trust, with no receipts, no balances, and no record of who changed what.',
@@ -389,29 +407,29 @@ export const experience: ExperienceEntry[] = [
         period: 'May 2026 – Present · remote',
         title: 'OCEAN — Saudi digital bank (Deloitte UK)',
         description: [
-          'Java Spring Boot microservices for cards, credit cards, transactions, notifications, and accounts; integrations with core banking, Network International, and fraud-detection platforms; Docker + Kubernetes.',
-        ],
-      },
-      {
-        period: 'Oct 2025 – Jan 2026 · remote',
-        title: 'Nexi Group — payments, Italy',
-        description: [
-          'High-performing Spring Boot REST APIs; Hibernate → tuned native SQL; large-scale batch processing on Oracle/MySQL with Liquibase migrations; multithreaded tool processing millions of payment transactions.',
+          'Java Spring Boot microservices for a new Saudi digital bank delivered by Deloitte UK, deployed and orchestrated with Kubernetes. Core business logic across the cards, credit-card, transactions, notifications and accounts domains, owned end-to-end; integrations with core banking, Network International and fraud-detection platforms with secure data exchange, error handling and reconciliation.',
         ],
       },
       {
         period: 'Oct 2024 – Sep 2025 · remote',
         title: 'Hyperexponential — insurance, UK',
         description: [
-          'Production portfolio-underwriting model on hX Renew for Beazley — replaced a legacy Excel process with modular Python; ported actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer.',
+          'Production portfolio-underwriting model on hX Renew for Beazley — replaced a legacy Excel process with modular, version-controlled Python across Algorithms, Components, Libraries, Parameter Tables, Data Schemas and Views; ported legacy actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer, validated with actuaries in biweekly demos.',
         ],
         frame: {},
         stat: { value: '~9×', label: 'faster · 13s → 1.5s' },
       },
+      {
+        period: 'Oct 2025 – Jan 2026 · remote',
+        title: 'Nexi Group — payments, Italy',
+        description: [
+          'High-performing Spring Boot REST APIs powering Nexi’s payment solution forms; Hibernate → tuned native SQL and batch processing on Oracle/MySQL with Liquibase migrations; multithreaded tool reading millions of payment transactions and generating formatted output files.',
+        ],
+      },
     ],
   },
   {
-    period: '2026 – Present',
+    period: '2026 · Cairo, Egypt',
     current: true,
     company: 'Freelance',
     role: 'Senior Software Engineer',
@@ -425,8 +443,8 @@ export const experience: ExperienceEntry[] = [
     company: 'ITWorx',
     role: 'Software Engineer',
     description: [
-      { text: 'Syngenta Global — agriculture, USA.', style: 'bright' },
-      ' Spring Boot + Hibernate microservices for agricultural data processing; Oracle optimization; AWS ECS + SNS event-driven architecture.',
+      { text: 'Syngenta Global — agriculture, USA (remote).', style: 'bright' },
+      ' Java Spring Boot + Hibernate (JPA) microservices collecting, processing and transforming agricultural data; refactored legacy components into a modular architecture; Oracle optimization through advanced JPA and SQL; deployed on AWS ECS with SNS as message broker for event-driven communication.',
     ],
   },
   {
@@ -434,7 +452,7 @@ export const experience: ExperienceEntry[] = [
     company: 'Qoodz',
     role: 'Backend Engineer',
     description: [
-      'NestJS backend for an F&B platform powering 3 mobile apps + 2 websites — loyalty, digital menus, inventory, ordering; Stripe/Paymob payments, Foodics POS; migrated Heroku → AWS.',
+      'Scalable NestJS backend for an F&B platform powering 3 mobile apps + 2 websites across multiple brands and customer segments — loyalty programs, digital menus, inventory, notifications, analytics, campaigns, feedback and online ordering; Stripe and Paymob payments, Foodics POS; migrated Heroku → AWS, reducing hosting costs.',
     ],
   },
   {
@@ -442,7 +460,7 @@ export const experience: ExperienceEntry[] = [
     company: 'TC Egypt',
     role: 'Backend Engineer',
     description: [
-      'NestJS LMS SaaS (courses, quizzes, learning tracks, progress tracking), TDD, Kashier payments, MySQL/TypeORM.',
+      'NestJS LMS delivered as a SaaS platform, built with TDD — courses, ebooks, articles, podcasts, quizzes, notes, learning tracks and progress tracking across user and instructor platforms; Kashier payment gateway; MySQL/TypeORM.',
     ],
   },
 ]
@@ -462,7 +480,7 @@ export interface SkillGroup {
 
 export const skills: SkillGroup[] = [
   {
-    num: '01 — core',
+    num: '01 — Core',
     title: 'Backend',
     span: 2,
     primaryStyle: 'hero',
@@ -473,14 +491,21 @@ export const skills: SkillGroup[] = [
     num: '02',
     title: 'Frontend',
     primary: ['React', 'Next.js'],
-    secondary: ['Tailwind CSS'],
     sub: { title: 'Mobile', primary: ['React Native (Expo)'] },
   },
   {
     num: '03',
-    title: 'Databases & data',
-    primary: ['PostgreSQL', 'MySQL', 'Oracle'],
-    secondary: ['MongoDB', 'pg-boss', 'SQL tuning', 'indexing & partitioning', 'Pandas / Polars / NumPy', 'ETL pipelines'],
+    title: 'Databases & Data',
+    primary: ['SQL', 'PostgreSQL', 'MySQL', 'Oracle'],
+    secondary: [
+      'MongoDB',
+      'pg-boss',
+      'ACID compliance',
+      'indexing & partitioning',
+      'Pandas / Polars / NumPy',
+      'data processing',
+      'ETL pipelines',
+    ],
   },
   {
     num: '04',
@@ -494,24 +519,30 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    num: '05 — current focus',
-    title: 'AI & agentic',
+    num: '05 — Current Focus',
+    title: 'AI & Agentic',
     span: 2,
     conic: true,
     primaryStyle: 'bright',
     primary: ['LLM tool integrations (Claude, Codex, Gemini)'],
     secondary: [
-      'MCP servers',
+      'MCP server integrations',
       'agentic development workflows',
       'skills creation',
       'context optimization',
       'GitHub automation',
-      'AI-vision analysis pipelines',
+      'reusable LLM command workflows',
     ],
   },
   {
     num: '06',
-    title: 'Also',
+    title: 'Technical Expertise',
+    primary: ['System design', 'Architecture: OOP'],
+    secondary: ['problem solving', 'data structures & algorithms', 'SOLID & ACID compliance'],
+  },
+  {
+    num: '07',
+    title: 'Tools',
     secondary: ['Playwright', 'Git', 'Jira', 'Azure DevOps', 'Swagger', 'Postman', 'Bruno'],
   },
 ]
@@ -530,14 +561,25 @@ export interface Credential {
 export const certifications: Credential[] = [
   { org: 'AWS · Feb 2024', title: 'Developer Associate' },
   { org: 'AWS · Nov 2023', title: 'Cloud Practitioner' },
-  { org: 'AWS · expected Aug 2026', title: 'Solutions Architect', pending: true },
+  { org: 'AWS · expected Oct 2026', title: 'Solutions Architect', pending: true },
+  { org: 'Goethe-Institut · Jan 2016', title: 'Goethe-Certificate B1' },
   { org: 'Cairo University · 2017–2022', title: 'B.S. Civil Engineering', note: 'GPA 3.81/4 — ranked 2nd' },
-  { org: 'Languages', body: 'Arabic (native) · English (fluent) · German (Goethe B1)', static: true },
+  {
+    org: 'Sahara Language School · 2014–2017',
+    title: 'Secondary School',
+    note: 'Final secondary grade 98% — Cairo, Egypt',
+  },
+  { org: 'Languages', body: 'Arabic (native) · English (fluent) · German (beginner)', static: true },
+  {
+    org: 'Activities',
+    body: 'Music team leader, St. George Theatre Team (2022 – present) · ICEC competition, Turkey — ranked 2nd (Jul 2021) · Marketing & PR, IACES (2021 – 2022)',
+    static: true,
+  },
 ]
 
 export const contact = {
   eyebrow: 'Contact',
-  heading: 'Have a product that needs building end to end?',
+  heading: 'Get in touch',
 }
 
 export const footer = {
