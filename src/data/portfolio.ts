@@ -371,6 +371,12 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Multi-tenant analytics and publishing platform for marketing agencies across Facebook, Instagram, and TikTok: org/brand workspaces with subscription limits, competitor analysis, a content calendar with approvals, and client-facing reports.',
     tags: ['Python', 'FastAPI', 'SQLAlchemy', 'Next.js'],
+    images: [
+      '/shots/echofold-landing.png',
+      '/shots/echofold-dashboard.png',
+      '/shots/echofold-competitors.png',
+      '/shots/echofold-content.png',
+    ],
     detail: {
       problem:
         'Agencies juggled per-platform dashboards and spreadsheets, with no unified view of brand performance, competitors, or the publishing pipeline they could share with clients.',
