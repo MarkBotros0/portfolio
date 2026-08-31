@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { prefersReducedMotion } from '../hooks/useMedia'
 
-const INTERVAL = 3500
+const INTERVAL = 2200
 
 /**
- * Auto-rotating screenshot slideshow: crossfades between images every 3.5s
+ * Auto-rotating screenshot slideshow: crossfades between images every 2.2s
  * with a random per-card stagger so frames don't switch in lockstep, and only
  * cycles while on screen. A single image renders statically; under reduced
  * motion the first image stays put.
@@ -39,7 +39,7 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
         setIndex((i) => (i + 1) % images.length)
         interval = setInterval(() => setIndex((i) => (i + 1) % images.length), INTERVAL)
       },
-      INTERVAL + Math.random() * 1500,
+      INTERVAL + Math.random() * 900,
     )
     return () => {
       clearTimeout(kickoff)

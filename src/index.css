@@ -762,7 +762,7 @@ input {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.9s ease;
+  transition: opacity 0.55s ease;
 }
 .slideshow img.active {
   opacity: 1;
