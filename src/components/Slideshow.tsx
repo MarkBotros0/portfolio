@@ -28,10 +28,11 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
   const ref = useRef<HTMLDivElement>(null)
   const images = sources.filter((s) => !broken.includes(s))
 
-  // Only the first slide is mounted up front; each one that finishes loading
-  // unlocks the next. One request per card at a time, visible frame first —
-  // rather than every slide of every card racing for bandwidth at once.
-  const mounted = armed ? Math.min(images.length, loaded.length + 1) : 0
+  // The visible slide loads alone so the frame fills as fast as possible; the
+  // rest are released together as soon as it settles. Chaining them one at a
+  // time instead made a ten-slide card's last frames tens of seconds away.
+  const settled = loaded.length + broken.length
+  const mounted = !armed ? 0 : settled ? images.length : 1
 
   // The rotation timer reads these through a ref so a newly-loaded image
   // doesn't restart the interval and reset the stagger.
@@ -91,10 +92,15 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
     }
   }, [running, images.length])
 
-  if (!images.length) return null
+  if (!sources.length) return null
 
-  const current = images[index]
-  const blur = shotPlaceholders[current]
+  // With every source broken there is nothing left to rotate, but the frame
+  // still keeps its blurred preview — collapsing to an empty box is the one
+  // outcome worse than a low-res one.
+  const current = images[index] ?? sources[0]
+  // Any shot's blur beats an empty box, so a src with no generated placeholder
+  // borrows the first one the card does have.
+  const blur = shotPlaceholders[current] ?? sources.map((s) => shotPlaceholders[s]).find(Boolean)
 
   return (
     <div ref={ref} className="slideshow">
@@ -111,6 +117,7 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
           src={src}
           alt={i === 0 ? alt : ''}
           decoding="async"
+          fetchPriority={i === 0 ? 'high' : 'low'}
           onLoad={() => setLoaded((l) => (l.includes(src) ? l : [...l, src]))}
           onError={() => setBroken((b) => (b.includes(src) ? b : [...b, src]))}
           className={i === index && loaded.includes(src) ? 'active' : undefined}
