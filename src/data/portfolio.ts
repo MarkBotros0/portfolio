@@ -439,7 +439,20 @@ export const experience: ExperienceEntry[] = [
         description: [
           'Production portfolio-underwriting model on hX Renew for Beazley — replaced a legacy Excel process with modular, version-controlled Python across Algorithms, Components, Libraries, Parameter Tables, Data Schemas and Views; ported legacy actuarial R scripts; NumPy/SciPy/Pandas/Polars computation layer, validated with actuaries in biweekly demos.',
         ],
-        frame: {},
+        frame: {
+          images: [
+            '/shots/hx-rating-summary.webp',
+            '/shots/hx-projections.webp',
+            '/shots/hx-own-experience.webp',
+            '/shots/hx-loss-ratios.webp',
+            '/shots/hx-risk-composition.webp',
+            '/shots/hx-policy-data.webp',
+            '/shots/hx-profit-commission.webp',
+            '/shots/hx-cat-loadings.webp',
+            '/shots/hx-rationale.webp',
+            '/shots/hx-risk-information.webp',
+          ],
+        },
         stat: { value: '~9×', label: 'faster · 13s → 1.5s' },
       },
       {

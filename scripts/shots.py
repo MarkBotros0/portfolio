@@ -45,6 +45,16 @@ IMPORTS = {
     "Money MAnager/Screenshot (1859).png": "jpc-money-payment",
     "Money MAnager/Screenshot (1861).png": "jpc-money-permissions",
     "Money MAnager/Screenshot (1862).png": "jpc-money-help",
+    "Hyperexponential/Screenshot (1847).png": "hx-rating-summary",
+    "Hyperexponential/Screenshot (1845).png": "hx-projections",
+    "Hyperexponential/Screenshot (1843).png": "hx-own-experience",
+    "Hyperexponential/Screenshot (1844).png": "hx-loss-ratios",
+    "Hyperexponential/Screenshot (1842).png": "hx-risk-composition",
+    "Hyperexponential/Screenshot (1841).png": "hx-policy-data",
+    "Hyperexponential/Screenshot (1846).png": "hx-profit-commission",
+    "Hyperexponential/Screenshot (1850).png": "hx-cat-loadings",
+    "Hyperexponential/Screenshot (1848).png": "hx-rationale",
+    "Hyperexponential/Screenshot (1849).png": "hx-risk-information",
 }
 
 

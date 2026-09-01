@@ -20,6 +20,26 @@ export const shotPlaceholders: Record<string, string> = {
     'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoYAA8APu1kqU2ppaOiMAgBMB2JaQAAijeAAP7wcm8M04CCvX9Gn0csM7xEvAAA',
   '/shots/egx-stock.webp':
     'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAetHKy7DKgAD+8CC26QEc4yzpjpkoNOg4NDWHkAAA',
+  '/shots/hx-cat-loadings.webp':
+    'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAAsAPu1iqU2ppaQiMAgBMB2JYwAAW+/iAmA0McNiDQAA/ueung8TCMQpvJF3rgw9NT6nIIpfL1geP5+HbQtYFjemp8s/G0CJJGEWXAAAAA==',
+  '/shots/hx-loss-ratios.webp':
+    'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYAAsAPu1orU2ppqSiMAgBMB2JZQC7ACHfhv9eANxha4AA/uerkYkG2yP662KgHuQmZHNne1GIr+LiV/rCuKiK3YAN+KNhxAAAAA==',
+  '/shots/hx-own-experience.webp':
+    'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYAAsAPu1iqk4ppaQiMAgBMB2JYwBUfoeh56sCtxg3EmygAP7nq5CjBEnCj0Uu7/OW9l44FE1reFE4QamUKeBEsYRhEHDKYv0AAA==',
+  '/shots/hx-policy-data.webp':
+    'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoYAAsAPu1iqU2ppaOiMAgBMB2JYwAAXBt3pCIqXVk4AP7g2T2xwZzXJysiemp9SNZOtQoz8ZlJAd+nCU3Y5wSUXAALdHyBr4AAAA==',
+  '/shots/hx-profit-commission.webp':
+    'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYAAsAPu1kqU2ppaQiMAgBMB2JZQBUfoeiD72UxF7jFUAA/uergZWPC7mp2nnmPLxwKXstZazI4Trmm8scgWXgaZwLMiehuiT8AAAA',
+  '/shots/hx-projections.webp':
+    'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoYAAsAPu1oqk6ppiQiMAgBMB2JZQC7ACKUc599hVPHYsgA/uerWx2WlelWW1PqSaSz2X1A8Z2Ex8+nVtexv1IAN+ACSAAA',
+  '/shots/hx-rating-summary.webp':
+    'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoYAAsAPu1orU6ppiSiMAgBMB2JZQBTAAeh/xCTi0nJsAD+56tjueyALoAjeFE0ZXTq51q0YUiLDJ8DQskcF8Q3Bo4AEn8FEAA=',
+  '/shots/hx-rationale.webp':
+    'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAAsAPu1mq04ppaQiMAgBMB2JYwBVI4fOnZxQhS9CZMAA/uerXVaDTAn3Yx4rzrvtmEjehsyxlCMP66cNOAAA',
+  '/shots/hx-risk-composition.webp':
+    'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JYwAAW+sYkmR27sAxJAD+4AhxiJwnzdswxqVLCoh/mLOCcf7WDWwOPYILi5ZSOoLREOWNltMHBLrw37uBCa3Ao4AAAA==',
+  '/shots/hx-risk-information.webp':
+    'data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JZQBTAAeh52PLsHcAAP7nrpBk6EGCSaV06vbAkIU1QYhgpfLaqrpuiKNiUJriCAAAAA==',
   '/shots/jpc-money-dashboard.webp':
     'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZWM+U0AL+5/vuHIAAP7sfDK3LNkZFOqgWrIOQ7dfChAdEqFPq8nS90vcMh8vt3BLWt9AgAA=',
   '/shots/jpc-money-expenses.webp':
