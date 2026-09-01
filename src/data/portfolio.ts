@@ -315,9 +315,8 @@ export const personalProjects: PersonalProject[] = [
     images: [
       '/shots/egx-dashboard.webp',
       '/shots/egx-stock.webp',
-      '/shots/egx-portfolio.webp',
+      '/shots/egx-chart.webp',
       '/shots/egx-compare.webp',
-      '/shots/egx-learn.webp',
     ],
     detail: {
       problem:
@@ -339,6 +338,7 @@ export const personalProjects: PersonalProject[] = [
       '/shots/jpc-space-group.webp',
       '/shots/jpc-space-season.webp',
       '/shots/jpc-space-assignments.webp',
+      '/shots/jpc-space-calendar.webp',
     ],
     detail: {
       problem:
@@ -362,6 +362,8 @@ export const personalProjects: PersonalProject[] = [
       '/shots/jpc-money-expenses.webp',
       '/shots/jpc-money-income.webp',
       '/shots/jpc-money-users.webp',
+      '/shots/jpc-money-permissions.webp',
+      '/shots/jpc-money-help.webp',
     ],
     detail: {
       problem:

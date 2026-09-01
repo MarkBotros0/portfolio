@@ -1,26 +1,63 @@
 import { useEffect, useRef, useState } from 'react'
+import { shotPlaceholders } from '../data/shotPlaceholders'
 import { prefersReducedMotion } from '../hooks/useMedia'
 
 const INTERVAL = 2200
+/** Start fetching a card's first frame this far before it scrolls into view. */
+const PRELOAD_MARGIN = '800px 0px'
 
 /**
  * Auto-rotating screenshot slideshow: crossfades between images every 2.2s
  * with a random per-card stagger so frames don't switch in lockstep, and only
  * cycles while on screen. A single image renders statically; under reduced
  * motion the first image stays put.
+ *
+ * Frames are never blank. An inlined 24px blur of the current shot paints
+ * immediately (no network), slides load one at a time — the visible one first,
+ * each unlocking the next — and the rotation only advances to a slide that has
+ * already decoded.
  */
 export function Slideshow({ images: sources, alt }: { images: string[]; alt: string }) {
   const [index, setIndex] = useState(0)
+  const [armed, setArmed] = useState(false)
   const [running, setRunning] = useState(false)
+  const [loaded, setLoaded] = useState<string[]>([])
   // A file that fails to load drops out of the rotation rather than showing a
   // broken frame — so listing a shot before it exists degrades gracefully.
   const [broken, setBroken] = useState<string[]>([])
   const ref = useRef<HTMLDivElement>(null)
   const images = sources.filter((s) => !broken.includes(s))
 
+  // Only the first slide is mounted up front; each one that finishes loading
+  // unlocks the next. One request per card at a time, visible frame first —
+  // rather than every slide of every card racing for bandwidth at once.
+  const mounted = armed ? Math.min(images.length, loaded.length + 1) : 0
+
+  // The rotation timer reads these through a ref so a newly-loaded image
+  // doesn't restart the interval and reset the stagger.
+  const latest = useRef({ images, loaded })
+  useEffect(() => {
+    latest.current = { images, loaded }
+  })
+
   useEffect(() => {
     if (index >= images.length) setIndex(0)
   }, [images.length, index])
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (!e.isIntersecting) return
+        setArmed(true)
+        io.disconnect()
+      },
+      { rootMargin: PRELOAD_MARGIN },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   useEffect(() => {
     if (images.length < 2 || prefersReducedMotion()) return
@@ -33,11 +70,18 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
 
   useEffect(() => {
     if (!running) return
+    const advance = () =>
+      setIndex((i) => {
+        const { images: imgs, loaded: done } = latest.current
+        const next = (i + 1) % imgs.length
+        // Hold the current frame rather than crossfading into an empty one.
+        return done.includes(imgs[next]) ? next : i
+      })
     let interval: ReturnType<typeof setInterval> | undefined
     const kickoff = setTimeout(
       () => {
-        setIndex((i) => (i + 1) % images.length)
-        interval = setInterval(() => setIndex((i) => (i + 1) % images.length), INTERVAL)
+        advance()
+        interval = setInterval(advance, INTERVAL)
       },
       INTERVAL + Math.random() * 900,
     )
@@ -49,16 +93,27 @@ export function Slideshow({ images: sources, alt }: { images: string[]; alt: str
 
   if (!images.length) return null
 
+  const current = images[index]
+  const blur = shotPlaceholders[current]
+
   return (
     <div ref={ref} className="slideshow">
-      {images.map((src, i) => (
+      {blur && (
+        <div
+          aria-hidden="true"
+          className="slide-blur"
+          style={{ backgroundImage: `url("${blur}")`, opacity: loaded.includes(current) ? 0 : 1 }}
+        />
+      )}
+      {images.slice(0, mounted).map((src, i) => (
         <img
           key={src}
           src={src}
           alt={i === 0 ? alt : ''}
-          loading="lazy"
+          decoding="async"
+          onLoad={() => setLoaded((l) => (l.includes(src) ? l : [...l, src]))}
           onError={() => setBroken((b) => (b.includes(src) ? b : [...b, src]))}
-          className={i === index ? 'active' : undefined}
+          className={i === index && loaded.includes(src) ? 'active' : undefined}
         />
       ))}
       {images.length > 1 && (

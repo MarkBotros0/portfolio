@@ -767,6 +767,17 @@ input {
 .slideshow img.active {
   opacity: 1;
 }
+/* Inlined 24px preview of the current shot — paints instantly so the frame is
+   never empty, then fades out under the real screenshot once it decodes. */
+.slide-blur {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  transform: scale(1.08);
+  transition: opacity 0.4s ease;
+}
 .slide-dots {
   position: absolute;
   right: 12px;

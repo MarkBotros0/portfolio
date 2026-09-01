@@ -4,6 +4,10 @@ node_modules/
 # build output
 dist/
 
+# raw screenshot originals — converted into public/shots by scripts/shots.py.
+# Must stay outside public/, which ships verbatim to dist/.
+_shots-src/
+
 # logs
 *.log
 npm-debug.log*
