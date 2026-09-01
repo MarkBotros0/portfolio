@@ -898,6 +898,21 @@ input {
 .case:hover .phone--r {
   transform: rotate(9deg) translate(-20%, 6%);
 }
+/* Pair layout: same fan as the trio, but the lead bleeds past both edges to
+   claw back size in the narrow frames this variant exists for. */
+.stage--pair .phone--lead {
+  height: 116%;
+}
+.stage--pair .phone--l {
+  height: 94%;
+  opacity: 0.9;
+  margin-right: -2%;
+  transform: rotate(-7deg) translateY(3%);
+}
+.case:hover .stage--pair .phone--l,
+.pcard:hover .stage--pair .phone--l {
+  transform: rotate(-9deg) translate(-5%, 2%);
+}
 /* Split layout: the lead phone runs off the bottom edge so it can be bigger
    than the frame's height would otherwise allow, with one phone behind it. */
 .stage--split .phone--lead {

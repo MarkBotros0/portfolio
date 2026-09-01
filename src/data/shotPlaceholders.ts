@@ -57,13 +57,17 @@ export const shotPlaceholders: Record<string, string> = {
   '/shots/jpc-money-users.webp':
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZWM+TsyTj17BDzKAAP7wAnX2EES9cNk/qVFc+2WjDu3CNMZgfCLgzW35cAAA',
   '/shots/jpc-space-assignments.webp':
-    'data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwCdAC0HePgAAP7v5hYb/NCYjuOVKt0qUGJ/mfIiPk/LyLhwsG0abSGppLNggAA=',
+    'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBQCdASoYADQAPu1sq1AppiOirBVbMTAdiWcA0UQIeAy/MrqAx22TIRJwHklhC5DcP4gIgAD+8M1I1N7/fWCYwI3mrD7CZplvzB9QSTgWhBCOWZ6KNp0Aqp8ABiudyzEibxKZvK5HNEqLupRlIhXjTc3vH5ck85f0PpGolS/GH0auGiTvDd72ndEiAtDojZ1AAA==',
   '/shots/jpc-space-calendar.webp':
-    'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JYwCdAC0HrSQAAP7wB93Qr8q3SfzJ2wMn5ZCltWAJ45fxRY4o7hiwgAA=',
-  '/shots/jpc-space-group.webp':
-    'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQC7AB5TD/dVPe4YZAAA/uwoHOGzAswux/jUUQRtIe0hTR3pcScoyEotGAAA',
-  '/shots/jpc-space-season.webp':
-    'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwAAetCowAD+8CaK9ymrdK6P/nY9K3uT8shSqKArZUFvrFpwAAAA',
+    'data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYADQAPu1wrVGppqkiqBgKqTAdiWcAzygIjuZjMA7P5NvDHb7JR4vAAP7wzUiGL9aLimYDnv+HOx7g4OTJbUYSkkk0crPDZ4KgbcC83aE/bOoxbRzdjcselWO607lNl0+zn7gAcCxTZHmAH40q4AAA',
+  '/shots/jpc-space-leader-home.webp':
+    'data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoYADQAPu1iqU2ppaOiMBgMATAdiWcAy+AVRO7610S6qQGC0HwBAuvIqDjgDoAA/vAFD12riRKeTN5BQ+7rgm6s+ugwmrnoFw1E/Jzfkr5wJU2ox0iWCKOfxvdqELmFn3rQEFRxE5xBEmyXoFQEx4F1pfEj4QfL+JlXgf1lUiYhCuXn+tVZUu2w+PxFT6RTXKMIsOWgFuydizWCOQziD4Lv42miw8iLI+CTWyxHT4YxoPpkNJu1KUu/DLIgAAAA',
+  '/shots/jpc-space-reports.webp':
+    'data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACwBwCdASoYADQAPtVep02oJaQiN/VcAQAaiWYAxgHRO7AYw51lVOEQ/Z4BzKW8KUfcp8087d19d63s6xCMw1z1/Gy7zxoAAP72jd8FGTH2/c4rn8yQLZjVDr82NvntACTlFfBQJqtgeRmQIWPXcAUzV1XPWKLneosKwHiHnhGS6PvgbdITpbfNidnbwgEqJRWR1I43QMebD5sdN7Tnn1AFqdmPYcOuB7VVMUYFpNEI+6q3/WU0PV2QTl1kHcoju32T0SqjO9U0cvNkWvnFsVJCJQAAAA==',
+  '/shots/jpc-space-student-home.webp':
+    'data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBgCdASoYADQAPu1ipk6ppSMiMBgMATAdiWcAyCAQ8NHCWb2d2nmQ5qUJTzIXk5ntcuiImtCZe1AAAP7wzUiFuxy8fS82K6eW4ylCZ/UQql/vgEb36uLZpb3f00O1TWStF6GXMwEIVDnMnm1zcKcm/W1k0OyK2YRn1778l1aWM/SmX5A41H5HkAt6MkYDfrS3uksc9PbjZdIeAfRG/fzUnrf0mNLeoC/uBjZ9nEAAAA==',
+  '/shots/jpc-space-submissions.webp':
+    'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADwBQCdASoYADQAPu1srU+ppiQqLBVbMUAdiWcAzjgIeGkxlBmg1wS56yTVNSzD+eS0i3ZRVhPZTAD+8M1Ihi1R6w/gWx9vCoeyKnSDZO1rzjUQtTgo1ipy57T8LoG4Sl4iZ7DvBa9Ky7MByTZpjZJBb2c9klQk+btWMtfx88+QtleMgtuZfYrnYdzZYZSZ0LdAAA==',
   '/shots/nanny-account.webp':
     'data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYADQAPu1qqU+ppiOiLBqrMTAdiWlrCV1/iVzoVVkJ2f0SgJAA/vBPGEUB59StsDuRXVv8QXl0boVubvHQWjoZTXvKaVxYg7LWag6Yx+otk7QLBc5U+xMzMVt6hf/zq+GDgmwdb04RhsYJAAA=',
   '/shots/nanny-admin-booking-detail.webp':

@@ -71,6 +71,15 @@ IMPORTS = {
     "Nanny now Admin/Screenshot (1870).png": "nanny-admin-booking-options",
     "Nanny now Admin/Screenshot (1871).png": "nanny-admin-packages",
     "Nanny now Admin/Screenshot (1868).png": "nanny-admin-promos",
+    # JPC Space — the mobile rebuild, replacing the old desktop captures.
+    # The Students roster shot is deliberately not imported: it lists real
+    # members' personal Gmail addresses.
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM.jpeg": "jpc-space-student-home",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (2).jpeg": "jpc-space-assignments",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (1).jpeg": "jpc-space-calendar",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (5).jpeg": "jpc-space-leader-home",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (2).jpeg": "jpc-space-submissions",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM.jpeg": "jpc-space-reports",
 }
 
 

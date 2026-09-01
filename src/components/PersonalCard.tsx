@@ -1,4 +1,5 @@
 import type { PersonalProject } from '../data/portfolio'
+import { PhoneStage } from './PhoneStage'
 import { Slideshow } from './Slideshow'
 import { Spot } from './Spot'
 
@@ -16,7 +17,11 @@ export function PersonalCard({ project, open, onToggle }: PersonalCardProps) {
       <Spot size={280} />
       <span className="pbadge">personal</span>
       <div className="pshot">
-        {project.images?.length ? <Slideshow images={project.images} alt={`${project.name} screenshot`} /> : null}
+        {project.phoneImages?.length ? (
+          <PhoneStage phones={project.phoneImages} alt={`${project.name} app screen`} lanes={2} />
+        ) : project.images?.length ? (
+          <Slideshow images={project.images} alt={`${project.name} screenshot`} />
+        ) : null}
       </div>
       <h3>{project.name}</h3>
       <p className="psub">{project.subtitle}</p>

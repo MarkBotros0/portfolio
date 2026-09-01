@@ -8,9 +8,11 @@ import { Slideshow } from './Slideshow'
  * instead. Each phone owns its own rotation and the screens are partitioned
  * round-robin, so no two phones can ever show the same shot at once.
  *
- * Two layouts, picked by what the project has:
+ * Three layouts, picked by what the project has and how much room it gets:
  *
  *   phones only    three mocks fanned across the centre of the frame.
+ *   two lanes      a lead and one behind it — for the narrow personal-project
+ *                  frames, where a third mock would be a thumbnail.
  *   phones + web   the landscape shots fill the frame and a pair of phones
  *                  overlaps them from the right, so one composite carries both
  *                  halves of a product that spans mobile and web.
@@ -19,16 +21,18 @@ export function PhoneStage({
   phones,
   backdrop,
   alt,
+  lanes: requested,
 }: {
   phones: string[]
   backdrop?: string[]
   alt: string
+  lanes?: number
 }) {
   if (!phones.length) return null
 
   // Phones share the frame with the web shots, so fewer and tighter.
   const split = Boolean(backdrop?.length)
-  const laneCount = split ? 2 : 3
+  const laneCount = requested ?? (split ? 2 : 3)
   const lanes =
     phones.length >= laneCount
       ? Array.from({ length: laneCount }, (_, i) => phones.filter((_, k) => k % laneCount === i))
@@ -36,8 +40,10 @@ export function PhoneStage({
   // The lead is the front phone; the rest tuck in behind it to its left.
   const [lead, ...behind] = lanes
 
+  const variant = split ? ' stage--split' : lanes.length === 2 ? ' stage--pair' : ''
+
   return (
-    <div className={split ? 'stage stage--split' : 'stage'}>
+    <div className={`stage${variant}`}>
       {backdrop?.length ? (
         <div className="stage-back">
           <Slideshow images={backdrop} alt={`${alt} — admin console`} />

@@ -320,6 +320,9 @@ export interface PersonalProject {
   /** Real product screenshots — auto-rotating slideshow when more than one;
       the striped frame renders as fallback while absent. */
   images?: string[]
+  /** Portrait phone captures — switches the frame to the device stage, which
+      pairs them across two mocks rather than letterboxing one. */
+  phoneImages?: string[]
   detail: {
     problem: string
     built: string
@@ -358,10 +361,13 @@ export const personalProjects: PersonalProject[] = [
     description:
       'Full portal for a student community running seasonal discipleship courses: five scoped roles (super, admin, leader, mentor, student), season/group/session management, and student well-being tracking.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'Auth.js'],
-    images: [
-      '/shots/jpc-space-group.webp',
-      '/shots/jpc-space-season.webp',
+    // Shots of the mobile rebuild — dealt across the two device mocks.
+    phoneImages: [
+      '/shots/jpc-space-leader-home.webp',
+      '/shots/jpc-space-student-home.webp',
+      '/shots/jpc-space-reports.webp',
       '/shots/jpc-space-assignments.webp',
+      '/shots/jpc-space-submissions.webp',
       '/shots/jpc-space-calendar.webp',
     ],
     detail: {
