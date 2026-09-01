@@ -64,6 +64,34 @@ export const shotPlaceholders: Record<string, string> = {
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQC7AB5TD/dVPe4YZAAA/uwoHOGzAswux/jUUQRtIe0hTR3pcScoyEotGAAA',
   '/shots/jpc-space-season.webp':
     'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JYwAAetCowAD+8CaK9ymrdK6P/nY9K3uT8shSqKArZUFvrFpwAAAA',
+  '/shots/nanny-account.webp':
+    'data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYADQAPu1qqU+ppiOiLBqrMTAdiWlrCV1/iVzoVVkJ2f0SgJAA/vBPGEUB59StsDuRXVv8QXl0boVubvHQWjoZTXvKaVxYg7LWag6Yx+otk7QLBc5U+xMzMVt6hf/zq+GDgmwdb04RhsYJAAA=',
+  '/shots/nanny-admin-booking-detail.webp':
+    'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoYAA8APu1krU2ppaSiMAgBMB2JaWM+AIqjIlzAAAD++pd3dO54tbdL31hdjCOzvUWlN/jQAAA=',
+  '/shots/nanny-admin-booking-options.webp':
+    'data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoYAA8AA4BaJaQAA7wWfygA/vRH5n8m8BgtKm4opT4AAA==',
+  '/shots/nanny-admin-dashboard.webp':
+    'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAXJQjrunw2AD+8doKkH1TuoTXWTIyXOaFcn90SFUv0AA=',
+  '/shots/nanny-admin-packages.webp':
+    'data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAe/QAAP7wlrrAMyubiyJeL9pPrFyAAA==',
+  '/shots/nanny-admin-pricing.webp':
+    'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAW+mELjBRJUFBAAD+8dmwwAb+QrNx29VZ1P4G+5vT/pJ+LtvP8AA=',
+  '/shots/nanny-admin-promos.webp':
+    'data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAfj4AAP7wq7zlOy8cAbq6dxAdQDgAAA==',
+  '/shots/nanny-booking-care.webp':
+    'data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBQCdASoYADQAPu1grk6ppSSiMBgKATAdiWkA0YAWuuS14lFu1L0g5q/3T0K5zH03Kv33eAAA/vB/5CPpHz2oAKEu6PqmoNX5J1Cpo4ySuFDq/ZZ2E+shyMuhkxTJYMjvSlVnn1wngREK0mt2ueJVzQrJTy09ttwX6hfdTwml5IeXOHgrk4yymsMgAAAA',
+  '/shots/nanny-booking-review.webp':
+    'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBQCdASoYADQAPu1iq06ppSOiMBQMATAdiWdjPltthQRYksDR9B6phIKL5X+lsmj1kJQAAP7wZ10eD2Hf9in9m0qW8Qp3wHMVtqM/O412C9R33FWy03j+p29OR9btct99+oy1bIhXitlzE3GCXUJWnlYAWIW1eehwBCbPi3WIx92uyZYjjEN5oLN1jJsaAAAAAA==',
+  '/shots/nanny-broadcast.webp':
+    'data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoYADQAPu1srlGppaQiqBgKqTAdiWlpH1zGA6ZuCq87jYe58h84NsToKdD1UAD+8dJarelPswnHvU22xisrRixz9D0aPS1w4sdWFiQq2lbl6L+jYbKOLs9OCDf2bzm7fYa9w3+5IpxK+fphEJLcHrHfz9sNdTO8fpsmAAAA',
+  '/shots/nanny-chat.webp':
+    'data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBQCdASoYADQAPu1qrVAppiQirBVbMTAdiWcAwvgHpIsPH7m7A7kkakQjBprfTDvOBIAA/t7sp8bXSvY4rMLgoKA8pc+TQ0y9sxddYu6ITRzhH6ttPiUtQAArr3GWs9FJxQB4DEgHmQAA',
+  '/shots/nanny-community-events.webp':
+    'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASoYADQAPu1orFCppaQisBQIATAdiWkA0ugMA+/XHuPrGFknowSd1VvFGAD+8E8OzGOpts5MjTbyxGFarEEReK7tFiBQQCjJy8QvAz51lkoWp9pWKLMk0MuWd0mhKXv7uY2YBypgAAA=',
+  '/shots/nanny-community-qa.webp':
+    'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYADQAPu1qqVCppaOirBVbMTAdiWkAzUgK59D8rODLAlvRaXgQAP7wT24pCFJEj9SkiyPlP7tzqdD5uPOzo5MtucXX09QxkT2CeSf6GR1EhZLLYIIIlIPSabIPzDa3dyvujiuAAAA=',
+  '/shots/nanny-services.webp':
+    'data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwBQCdASoYADQAPu1gr1CppKQirBVbMTAdiWkAy2gId+QB5uY7RYA4WQQm5Y65/GyxZ9U78AAA/vA+KfqqM5PL/z5M8A08aZe9RdFzy5K599fHLJ4rQIzyu8204FUVwrAJqoYx6X2HrrNcLRCI2AAA',
   '/shots/snurra-accessibility.webp':
     'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAettfr0xQAAD+8KvWKDPvxTs96y9HDdwAAAA=',
   '/shots/snurra-check-catalog.webp':

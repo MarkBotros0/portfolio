@@ -55,6 +55,22 @@ IMPORTS = {
     "Hyperexponential/Screenshot (1850).png": "hx-cat-loadings",
     "Hyperexponential/Screenshot (1848).png": "hx-rationale",
     "Hyperexponential/Screenshot (1849).png": "hx-risk-information",
+    # NannyNow — portrait phone captures, rendered in the device stage.
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.14 PM.jpeg": "nanny-services",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM.jpeg": "nanny-booking-care",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM (1).jpeg": "nanny-booking-review",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.13 PM.jpeg": "nanny-broadcast",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.16 PM.jpeg": "nanny-chat",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.18 PM.jpeg": "nanny-community-qa",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.17 PM.jpeg": "nanny-community-events",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.19 PM.jpeg": "nanny-account",
+    # NannyNow admin console — landscape, shown behind the devices.
+    "Nanny now Admin/Screenshot (1867).png": "nanny-admin-dashboard",
+    "Nanny now Admin/Screenshot (1872).png": "nanny-admin-booking-detail",
+    "Nanny now Admin/Screenshot (1869).png": "nanny-admin-pricing",
+    "Nanny now Admin/Screenshot (1870).png": "nanny-admin-booking-options",
+    "Nanny now Admin/Screenshot (1871).png": "nanny-admin-packages",
+    "Nanny now Admin/Screenshot (1868).png": "nanny-admin-promos",
 }
 
 

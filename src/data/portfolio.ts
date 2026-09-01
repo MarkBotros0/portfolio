@@ -185,6 +185,9 @@ export interface FeaturedProject {
   /** Real product screenshots — auto-rotating slideshow when more than one;
       the striped frame renders as fallback while absent. */
   images?: string[]
+  /** Portrait phone captures. Their presence switches the frame to the device
+      stage, which fans them across three mocks and dims `images` behind. */
+  phoneImages?: string[]
   screenshotCaption: string
   detail: {
     problem: string
@@ -267,6 +270,27 @@ export const featuredProjects: FeaturedProject[] = [
     description:
       'On-demand nanny-booking service spanning mobile and web: map/radius nanny discovery, broadcast booking requests with first-to-accept claiming, PIN-gated check-in, live care logs and live camera monitoring, payments with refunds, plus promo codes, prepaid hour packages, rewards, and referrals.',
     tags: ['React Native', 'Expo', 'Express', 'Prisma', 'PostGIS', 'Paymob', 'Turborepo'],
+    // The web half of the product — fills the frame behind the phones.
+    images: [
+      '/shots/nanny-admin-dashboard.webp',
+      '/shots/nanny-admin-booking-detail.webp',
+      '/shots/nanny-admin-pricing.webp',
+      '/shots/nanny-admin-booking-options.webp',
+      '/shots/nanny-admin-packages.webp',
+      '/shots/nanny-admin-promos.webp',
+    ],
+    // Dealt round-robin across the device mocks, so the order below is what
+    // each phone cycles through rather than a single sequence.
+    phoneImages: [
+      '/shots/nanny-services.webp',
+      '/shots/nanny-booking-care.webp',
+      '/shots/nanny-booking-review.webp',
+      '/shots/nanny-broadcast.webp',
+      '/shots/nanny-chat.webp',
+      '/shots/nanny-community-qa.webp',
+      '/shots/nanny-community-events.webp',
+      '/shots/nanny-account.webp',
+    ],
     screenshotCaption: 'screenshot slot — parent & nanny app',
     detail: {
       problem:

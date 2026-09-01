@@ -799,6 +799,134 @@ input {
   box-shadow: 0 0 6px var(--a);
 }
 
+/* ---------- device stage (frames holding portrait phone captures) ---------- */
+
+.stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Landscape shots of the same product, filling the frame behind the devices. */
+.stage-back {
+  position: absolute;
+  inset: 0;
+}
+.stage-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(70% 90% at 50% 108%, color-mix(in oklab, var(--a) 26%, transparent), transparent 70%),
+    radial-gradient(90% 70% at 50% -10%, rgba(255, 255, 255, 0.07), transparent 70%);
+}
+/* With web shots underneath, the wash turns into a scrim instead: it darkens
+   the right half so the phones read as foreground against a busy console, and
+   leaves the left — sidebar, page title, hero numbers — untouched. */
+.stage--split .stage-glow {
+  background: linear-gradient(
+    100deg,
+    transparent 34%,
+    rgba(8, 8, 14, 0.55) 58%,
+    rgba(8, 8, 14, 0.88) 82%
+  );
+}
+.stage-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.stage--split .stage-row {
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 4%;
+}
+.phone {
+  position: relative;
+  aspect-ratio: 589 / 1280;
+  flex: none;
+  padding: 4px;
+  border-radius: 8.5%/4%;
+  background: linear-gradient(155deg, #34343f, #0d0d14 60%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.09) inset,
+    0 26px 55px -24px rgba(0, 0, 0, 0.85);
+  transition: transform 0.5s var(--ease-out);
+}
+.phone-screen {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 7%/3.3%;
+  background: #0e0e16;
+}
+.phone-notch {
+  position: absolute;
+  z-index: 2;
+  top: 2.2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26%;
+  height: 1.6%;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.18);
+}
+.phone--lead {
+  height: 97%;
+  z-index: 2;
+}
+/* The flanking pair sits lower and fans outward, tucked under the lead so the
+   centre screen keeps as much width as the frame can give it. */
+.phone--l,
+.phone--r {
+  height: 74%;
+  opacity: 0.66;
+  z-index: 1;
+}
+.phone--l {
+  transform: rotate(-7deg) translate(26%, 7%);
+}
+.phone--r {
+  transform: rotate(7deg) translate(-26%, 7%);
+}
+.case:hover .phone--l {
+  transform: rotate(-9deg) translate(20%, 6%);
+}
+.case:hover .phone--r {
+  transform: rotate(9deg) translate(-20%, 6%);
+}
+/* Split layout: the lead phone runs off the bottom edge so it can be bigger
+   than the frame's height would otherwise allow, with one phone behind it. */
+.stage--split .phone--lead {
+  height: 106%;
+  margin-bottom: -11%;
+}
+.stage--split .phone--l {
+  height: 82%;
+  opacity: 0.9;
+  margin-right: -9%;
+  margin-bottom: -4%;
+  transform: rotate(-6deg);
+}
+/* A dark halo as well as the drop shadow — the console behind is bright cream
+   and the phone screens are too, so the bezel alone doesn't separate them. */
+.stage--split .phone {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.09) inset,
+    0 0 46px 14px rgba(8, 8, 14, 0.5),
+    0 26px 55px -24px rgba(0, 0, 0, 0.9);
+}
+.case:hover .stage--split .phone--l {
+  transform: rotate(-8deg) translateY(-3%);
+}
+/* Rotation dots would collide with each app's own bottom nav, three times over. */
+.stage .slide-dots {
+  display: none;
+}
+
 /* ---------- spotlight layer (shared) ---------- */
 
 .spot-layer {
@@ -1078,6 +1206,16 @@ input {
   padding: 15px;
   transition: transform 0.35s var(--ease-out);
 }
+/* Portrait phone captures need vertical room the 16/10 frame can't give them,
+   so the stage variant squares up and lets the devices run nearly full height. */
+.shot--stage {
+  aspect-ratio: 4 / 3;
+}
+/* When web shots share the frame it has to stay closer to their own 16:10,
+   or covering them into a squarer box throws most of the console away. */
+.shot--stage:has(.stage--split) {
+  aspect-ratio: 3 / 2;
+}
 .shot img {
   position: absolute;
   inset: 0;
@@ -1092,6 +1230,16 @@ input {
   font-family: var(--font-display);
   font-size: 13px;
   color: var(--a);
+}
+/* The striped fallback is dark, so the bare index reads fine there — over a
+   light screenshot it needs its own backing to stay legible. */
+.shot--stage .shot-idx {
+  top: 11px;
+  left: 12px;
+  padding: 3px 9px 4px;
+  border-radius: 100px;
+  background: rgba(8, 8, 14, 0.74);
+  backdrop-filter: blur(5px);
 }
 .shot-cap {
   font-family: var(--font-mono);

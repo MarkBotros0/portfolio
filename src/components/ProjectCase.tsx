@@ -1,4 +1,5 @@
 import type { FeaturedProject } from '../data/portfolio'
+import { PhoneStage } from './PhoneStage'
 import { Slideshow } from './Slideshow'
 import { Spot } from './Spot'
 
@@ -17,8 +18,14 @@ export function ProjectCase({ project, position, open, onToggle }: ProjectCasePr
     <article data-reveal data-spot data-stack className="case" style={{ top: 92 + position * 12 }}>
       <Spot size={480} />
       <div className="case-grid">
-        <div data-tilt className="shot">
-          {project.images?.length ? (
+        <div data-tilt className={project.phoneImages?.length ? 'shot shot--stage' : 'shot'}>
+          {project.phoneImages?.length ? (
+            <PhoneStage
+              phones={project.phoneImages}
+              backdrop={project.images}
+              alt={`${project.name} app screen`}
+            />
+          ) : project.images?.length ? (
             <Slideshow images={project.images} alt={`${project.name} screenshot`} />
           ) : (
             <span className="shot-cap">{project.screenshotCaption}</span>
