@@ -2,124 +2,124 @@
 // A 24px WebP of every screenshot, inlined so a frame paints a blurred
 // preview instantly instead of sitting empty while the real file loads.
 export const shotPlaceholders: Record<string, string> = {
-  '/shots/echofold-competitors.webp':
+  '/shots/echofold/competitors.webp':
     'data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQAwCdASoYAA8APu1orU2ppqSiMAgBMB2JYgABHui775dD0nbQAP78sVGPeiv7Z+XhrQyJmsMl+u7qGQ+IVwPZ0rCPHF6qeaD9/ydPOVl2omCWt/vzqGYJZAXIrwAA',
-  '/shots/echofold-content.webp':
+  '/shots/echofold/content.webp':
     'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAwAwCdASoYAAwAPu1iqU2ppaOiMAgBMB2JaQDImDKKuRAAAP7wIuFv/Ty4OiCL21qriUJcsSFJuAAA',
-  '/shots/echofold-dashboard.webp':
+  '/shots/echofold/dashboard.webp':
     'data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYAA8APu1mqk4ppaOiMAgBMB2JQAALfZp5Ld/iMZOAAP7ugcqRozUXwqKNgs5tNfIHLZtlFIAVs8aevYVAqxqGAUAAAA==',
-  '/shots/echofold-landing.webp':
+  '/shots/echofold/landing.webp':
     'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAwCdASoYAA8APu1kqU2ppaQiMAgBMB2JZQAAW+sYHrsP4K0AAP7wyRqCckfCk+nc5gK95LBhhRT/uAgDwV8WwAA=',
-  '/shots/echofold-signin.webp':
+  '/shots/echofold/signin.webp':
     'data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAwCdASoYAA8APu1qrU8ppiQiMAgBMB2JZwDKACHh4OFNm3Z3QgkAAP7ulldanp1RY6ZV1Ah0CFQCaCp9kPR//ymJKkVAAAA=',
-  '/shots/egx-chart.webp':
+  '/shots/egx/chart.webp':
     'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAAAwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAidoGZdzAAP7wiFdX8cTaJeAA',
-  '/shots/egx-compare.webp':
+  '/shots/egx/compare.webp':
     'data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAixSAAP7wh0tVYLIZmMPIAA==',
-  '/shots/egx-dashboard.webp':
+  '/shots/egx/dashboard.webp':
     'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAgCdASoYAA8APu1kqU2ppaOiMAgBMB2JaQAAijeAAP7wcm8M04CCvX9Gn0csM7xEvAAA',
-  '/shots/egx-stock.webp':
+  '/shots/egx/stock.webp':
     'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwAAetHKy7DKgAD+8CC26QEc4yzpjpkoNOg4NDWHkAAA',
-  '/shots/hx-cat-loadings.webp':
+  '/shots/hyperexponential/cat-loadings.webp':
     'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoYAAsAPu1iqU2ppaQiMAgBMB2JYwAAW+/iAmA0McNiDQAA/ueung8TCMQpvJF3rgw9NT6nIIpfL1geP5+HbQtYFjemp8s/G0CJJGEWXAAAAA==',
-  '/shots/hx-loss-ratios.webp':
+  '/shots/hyperexponential/loss-ratios.webp':
     'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYAAsAPu1orU2ppqSiMAgBMB2JZQC7ACHfhv9eANxha4AA/uerkYkG2yP662KgHuQmZHNne1GIr+LiV/rCuKiK3YAN+KNhxAAAAA==',
-  '/shots/hx-own-experience.webp':
+  '/shots/hyperexponential/own-experience.webp':
     'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAwCdASoYAAsAPu1iqk4ppaQiMAgBMB2JYwBUfoeh56sCtxg3EmygAP7nq5CjBEnCj0Uu7/OW9l44FE1reFE4QamUKeBEsYRhEHDKYv0AAA==',
-  '/shots/hx-policy-data.webp':
+  '/shots/hyperexponential/policy-data.webp':
     'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoYAAsAPu1iqU2ppaOiMAgBMB2JYwAAXBt3pCIqXVk4AP7g2T2xwZzXJysiemp9SNZOtQoz8ZlJAd+nCU3Y5wSUXAALdHyBr4AAAA==',
-  '/shots/hx-profit-commission.webp':
+  '/shots/hyperexponential/profit-commission.webp':
     'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADQAwCdASoYAAsAPu1kqU2ppaQiMAgBMB2JZQBUfoeiD72UxF7jFUAA/uergZWPC7mp2nnmPLxwKXstZazI4Trmm8scgWXgaZwLMiehuiT8AAAA',
-  '/shots/hx-projections.webp':
+  '/shots/hyperexponential/projections.webp':
     'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoYAAsAPu1oqk6ppiQiMAgBMB2JZQC7ACKUc599hVPHYsgA/uerWx2WlelWW1PqSaSz2X1A8Z2Ex8+nVtexv1IAN+ACSAAA',
-  '/shots/hx-rating-summary.webp':
+  '/shots/hyperexponential/rating-summary.webp':
     'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoYAAsAPu1orU6ppiSiMAgBMB2JZQBTAAeh/xCTi0nJsAD+56tjueyALoAjeFE0ZXTq51q0YUiLDJ8DQskcF8Q3Bo4AEn8FEAA=',
-  '/shots/hx-rationale.webp':
+  '/shots/hyperexponential/rationale.webp':
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAAsAPu1mq04ppaQiMAgBMB2JYwBVI4fOnZxQhS9CZMAA/uerXVaDTAn3Yx4rzrvtmEjehsyxlCMP66cNOAAA',
-  '/shots/hx-risk-composition.webp':
+  '/shots/hyperexponential/risk-composition.webp':
     'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JYwAAW+sYkmR27sAxJAD+4AhxiJwnzdswxqVLCoh/mLOCcf7WDWwOPYILi5ZSOoLREOWNltMHBLrw37uBCa3Ao4AAAA==',
-  '/shots/hx-risk-information.webp':
+  '/shots/hyperexponential/risk-information.webp':
     'data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAwCdASoYAAsAPu1iqk2ppaQiMAgBMB2JZQBTAAeh52PLsHcAAP7nrpBk6EGCSaV06vbAkIU1QYhgpfLaqrpuiKNiUJriCAAAAA==',
-  '/shots/jpc-money-dashboard.webp':
+  '/shots/jpc-money/dashboard.webp':
     'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZWM+U0AL+5/vuHIAAP7sfDK3LNkZFOqgWrIOQ7dfChAdEqFPq8nS90vcMh8vt3BLWt9AgAA=',
-  '/shots/jpc-money-expenses.webp':
+  '/shots/jpc-money/expenses.webp':
     'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQAAetCwVFAAAP7wIjvTkh2S4Xe8oy6dpG9tdh9ZU7jOgAA=',
-  '/shots/jpc-money-help.webp':
+  '/shots/jpc-money/help.webp':
     'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQAAetFAAAD+78SSlfz2WrdN72PsLtyVizhI0NLAAA==',
-  '/shots/jpc-money-income.webp':
+  '/shots/jpc-money/income.webp':
     'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQCw7C0HpBKkAAD+8CLO5ewSV2CDrIIwYsQt+tFO+PdGYXtWtuAA',
-  '/shots/jpc-money-payment.webp':
+  '/shots/jpc-money/payment.webp':
     'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JZQCdACHgT1ej3NocwFAA/vKiFEVXj7j4CbFsGuUUZlckgAA=',
-  '/shots/jpc-money-permissions.webp':
+  '/shots/jpc-money/permissions.webp':
     'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZQCdACHf445kAAD+8phUy6Oq3oIuswNmzQm5Anp2LUqAAAA=',
-  '/shots/jpc-money-subscriptions.webp':
+  '/shots/jpc-money/subscriptions.webp':
     'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQC06C0IzkVNIAD+8AR/OErsGM34ozgm6MqDFBcAAA==',
-  '/shots/jpc-money-users.webp':
+  '/shots/jpc-money/users.webp':
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZWM+TsyTj17BDzKAAP7wAnX2EES9cNk/qVFc+2WjDu3CNMZgfCLgzW35cAAA',
-  '/shots/jpc-space-assignments.webp':
+  '/shots/jpc-space/assignments.webp':
     'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBQCdASoYADQAPu1sq1AppiOirBVbMTAdiWcA0UQIeAy/MrqAx22TIRJwHklhC5DcP4gIgAD+8M1I1N7/fWCYwI3mrD7CZplvzB9QSTgWhBCOWZ6KNp0Aqp8ABiudyzEibxKZvK5HNEqLupRlIhXjTc3vH5ck85f0PpGolS/GH0auGiTvDd72ndEiAtDojZ1AAA==',
-  '/shots/jpc-space-calendar.webp':
+  '/shots/jpc-space/calendar.webp':
     'data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoYADQAPu1wrVGppqkiqBgKqTAdiWcAzygIjuZjMA7P5NvDHb7JR4vAAP7wzUiGL9aLimYDnv+HOx7g4OTJbUYSkkk0crPDZ4KgbcC83aE/bOoxbRzdjcselWO607lNl0+zn7gAcCxTZHmAH40q4AAA',
-  '/shots/jpc-space-leader-home.webp':
+  '/shots/jpc-space/leader-home.webp':
     'data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABQBQCdASoYADQAPu1iqU2ppaOiMBgMATAdiWcAy+AVRO7610S6qQGC0HwBAuvIqDjgDoAA/vAFD12riRKeTN5BQ+7rgm6s+ugwmrnoFw1E/Jzfkr5wJU2ox0iWCKOfxvdqELmFn3rQEFRxE5xBEmyXoFQEx4F1pfEj4QfL+JlXgf1lUiYhCuXn+tVZUu2w+PxFT6RTXKMIsOWgFuydizWCOQziD4Lv42miw8iLI+CTWyxHT4YxoPpkNJu1KUu/DLIgAAAA',
-  '/shots/jpc-space-reports.webp':
+  '/shots/jpc-space/reports.webp':
     'data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAACwBwCdASoYADQAPtVep02oJaQiN/VcAQAaiWYAxgHRO7AYw51lVOEQ/Z4BzKW8KUfcp8087d19d63s6xCMw1z1/Gy7zxoAAP72jd8FGTH2/c4rn8yQLZjVDr82NvntACTlFfBQJqtgeRmQIWPXcAUzV1XPWKLneosKwHiHnhGS6PvgbdITpbfNidnbwgEqJRWR1I43QMebD5sdN7Tnn1AFqdmPYcOuB7VVMUYFpNEI+6q3/WU0PV2QTl1kHcoju32T0SqjO9U0cvNkWvnFsVJCJQAAAA==',
-  '/shots/jpc-space-student-home.webp':
+  '/shots/jpc-space/student-home.webp':
     'data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBgCdASoYADQAPu1ipk6ppSMiMBgMATAdiWcAyCAQ8NHCWb2d2nmQ5qUJTzIXk5ntcuiImtCZe1AAAP7wzUiFuxy8fS82K6eW4ylCZ/UQql/vgEb36uLZpb3f00O1TWStF6GXMwEIVDnMnm1zcKcm/W1k0OyK2YRn1778l1aWM/SmX5A41H5HkAt6MkYDfrS3uksc9PbjZdIeAfRG/fzUnrf0mNLeoC/uBjZ9nEAAAA==',
-  '/shots/jpc-space-submissions.webp':
+  '/shots/jpc-space/submissions.webp':
     'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADwBQCdASoYADQAPu1srU+ppiQqLBVbMUAdiWcAzjgIeGkxlBmg1wS56yTVNSzD+eS0i3ZRVhPZTAD+8M1Ihi1R6w/gWx9vCoeyKnSDZO1rzjUQtTgo1ipy57T8LoG4Sl4iZ7DvBa9Ky7MByTZpjZJBb2c9klQk+btWMtfx88+QtleMgtuZfYrnYdzZYZSZ0LdAAA==',
-  '/shots/nanny-account.webp':
+  '/shots/nannynow/account.webp':
     'data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYADQAPu1qqU+ppiOiLBqrMTAdiWlrCV1/iVzoVVkJ2f0SgJAA/vBPGEUB59StsDuRXVv8QXl0boVubvHQWjoZTXvKaVxYg7LWag6Yx+otk7QLBc5U+xMzMVt6hf/zq+GDgmwdb04RhsYJAAA=',
-  '/shots/nanny-admin-booking-detail.webp':
+  '/shots/nannynow/admin-booking-detail.webp':
     'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoYAA8APu1krU2ppaSiMAgBMB2JaWM+AIqjIlzAAAD++pd3dO54tbdL31hdjCOzvUWlN/jQAAA=',
-  '/shots/nanny-admin-booking-options.webp':
+  '/shots/nannynow/admin-booking-options.webp':
     'data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoYAA8AA4BaJaQAA7wWfygA/vRH5n8m8BgtKm4opT4AAA==',
-  '/shots/nanny-admin-dashboard.webp':
+  '/shots/nannynow/admin-dashboard.webp':
     'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAXJQjrunw2AD+8doKkH1TuoTXWTIyXOaFcn90SFUv0AA=',
-  '/shots/nanny-admin-packages.webp':
+  '/shots/nannynow/admin-packages.webp':
     'data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAe/QAAP7wlrrAMyubiyJeL9pPrFyAAA==',
-  '/shots/nanny-admin-pricing.webp':
+  '/shots/nannynow/admin-pricing.webp':
     'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAW+mELjBRJUFBAAD+8dmwwAb+QrNx29VZ1P4G+5vT/pJ+LtvP8AA=',
-  '/shots/nanny-admin-promos.webp':
+  '/shots/nannynow/admin-promos.webp':
     'data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAfj4AAP7wq7zlOy8cAbq6dxAdQDgAAA==',
-  '/shots/nanny-booking-care.webp':
+  '/shots/nannynow/booking-care.webp':
     'data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBQCdASoYADQAPu1grk6ppSSiMBgKATAdiWkA0YAWuuS14lFu1L0g5q/3T0K5zH03Kv33eAAA/vB/5CPpHz2oAKEu6PqmoNX5J1Cpo4ySuFDq/ZZ2E+shyMuhkxTJYMjvSlVnn1wngREK0mt2ueJVzQrJTy09ttwX6hfdTwml5IeXOHgrk4yymsMgAAAA',
-  '/shots/nanny-booking-review.webp':
+  '/shots/nannynow/booking-review.webp':
     'data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBQCdASoYADQAPu1iq06ppSOiMBQMATAdiWdjPltthQRYksDR9B6phIKL5X+lsmj1kJQAAP7wZ10eD2Hf9in9m0qW8Qp3wHMVtqM/O412C9R33FWy03j+p29OR9btct99+oy1bIhXitlzE3GCXUJWnlYAWIW1eehwBCbPi3WIx92uyZYjjEN5oLN1jJsaAAAAAA==',
-  '/shots/nanny-broadcast.webp':
+  '/shots/nannynow/broadcast.webp':
     'data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAwBQCdASoYADQAPu1srlGppaQiqBgKqTAdiWlpH1zGA6ZuCq87jYe58h84NsToKdD1UAD+8dJarelPswnHvU22xisrRixz9D0aPS1w4sdWFiQq2lbl6L+jYbKOLs9OCDf2bzm7fYa9w3+5IpxK+fphEJLcHrHfz9sNdTO8fpsmAAAA',
-  '/shots/nanny-chat.webp':
+  '/shots/nannynow/chat.webp':
     'data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAABQBQCdASoYADQAPu1qrVAppiQirBVbMTAdiWcAwvgHpIsPH7m7A7kkakQjBprfTDvOBIAA/t7sp8bXSvY4rMLgoKA8pc+TQ0y9sxddYu6ITRzhH6ttPiUtQAArr3GWs9FJxQB4DEgHmQAA',
-  '/shots/nanny-community-events.webp':
+  '/shots/nannynow/community-events.webp':
     'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQBACdASoYADQAPu1orFCppaQisBQIATAdiWkA0ugMA+/XHuPrGFknowSd1VvFGAD+8E8OzGOpts5MjTbyxGFarEEReK7tFiBQQCjJy8QvAz51lkoWp9pWKLMk0MuWd0mhKXv7uY2YBypgAAA=',
-  '/shots/nanny-community-qa.webp':
+  '/shots/nannynow/community-qa.webp':
     'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYADQAPu1qqVCppaOirBVbMTAdiWkAzUgK59D8rODLAlvRaXgQAP7wT24pCFJEj9SkiyPlP7tzqdD5uPOzo5MtucXX09QxkT2CeSf6GR1EhZLLYIIIlIPSabIPzDa3dyvujiuAAAA=',
-  '/shots/nanny-services.webp':
+  '/shots/nannynow/services.webp':
     'data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACwBQCdASoYADQAPu1gr1CppKQirBVbMTAdiWkAy2gId+QB5uY7RYA4WQQm5Y65/GyxZ9U78AAA/vA+KfqqM5PL/z5M8A08aZe9RdFzy5K599fHLJ4rQIzyu8204FUVwrAJqoYx6X2HrrNcLRCI2AAA',
-  '/shots/snurra-accessibility.webp':
+  '/shots/snurra/accessibility.webp':
     'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAettfr0xQAAD+8KvWKDPvxTs96y9HDdwAAAA=',
-  '/shots/snurra-check-catalog.webp':
+  '/shots/snurra/check-catalog.webp':
     'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAQAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JaQAAetCmgAAA/vCsLSpwvxxUK3EMxx10CAAA',
-  '/shots/snurra-dashboard.webp':
+  '/shots/snurra/dashboard.webp':
     'data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAXu7ybfCngAD+8Hjn9tTYhzRrl/Jn9d81iqQ1q8+SNS4k8jdo7B8s3gIAAAA=',
-  '/shots/snurra-portfolio.webp':
+  '/shots/snurra/portfolio.webp':
     'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAetEOs7oAAP7wwEMKi9y2QhDM/ozzeMAA',
-  '/shots/snurra-run-overview.webp':
+  '/shots/snurra/run-overview.webp':
     'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAetRuOmPgAP7wk+7zUWftlv9td/IHaAAA',
-  '/shots/spectra-crawler.webp':
+  '/shots/spectra/crawler.webp':
     'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABQAwCdASoYAA8APu1kqU2ppaOiMAgBMB2JZwCdACHfBWEaAAD+6X36odrTiqXWVFg4AVW12iimOuHiobvPHNuJAAA=',
-  '/shots/spectra-figma-to-code.webp':
+  '/shots/spectra/figma-to-code.webp':
     'data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYAA8APu1kqk4ppaQiMAgBMB2JZQDA3CHfxcnGBQT/LPzpAAD+6X1pJB6JRfIgl6lqQSLxag3pQdij7OFLesv2hjTBT9pF4uDD6xO5XV/NDBpv+BP22MC6MyTQNkgo9iAAAA==',
-  '/shots/spectra-maintenance.webp':
+  '/shots/spectra/maintenance.webp':
     'data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAADwAwCdASoYAA8APu1iqk4ppaQiMAgBMB2JQBOgBDv4Fmmx7eNsy6AAAP7pe/slyZBMCVYwNLu4cvKdPbpkcV0MLWlODiAIaSEw1QjDXDzqT7h03xN0owqhPLBCMV+tO3hq4Kuk7IUHKdWf6FR32bO0WhBogAAA',
-  '/shots/spectra-projects.webp':
+  '/shots/spectra/projects.webp':
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAA8APu1kqU2ppaQiMAgBMB2JZQCw7CHfzjHbgKgHbgAA/ul0J80VDHNFckVvDfFz0aBIZmc6mqz8D0VIwAAA',
-  '/shots/spectra-qa-diff.webp':
+  '/shots/spectra/qa-diff.webp':
     'data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoYAA8APu1iqk2ppaQiMAgBMB2JYwC/OB9qvp9UG5/jTe1gAAD+6YYYcI29EVPeszZqpPBlGdjf3pJkI5iIA5LrWjdeaD7CPLPB7/dOBh2tTwYyab5X//yz1ACfNsig8vbHnBFMygAAAA==',
-  '/shots/spectra-site-audit.webp':
+  '/shots/spectra/site-audit.webp':
     'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAwCdASoYAA8APu1iqU2ppaQiMAgBMB2JZwAAUvqA+v1JnUYfzuRgAP7phnvfcGT6AHM3THcHpb0u7Sq90gOjmS2nhfVj7CqQRcYZ64E4poJ9ujwAAA==',
-  '/shots/spectra-skills.webp':
+  '/shots/spectra/skills.webp':
     'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZwC7ACHgCz+SSL2wZ4gAAP7pgZhj6MLqTSBG3lG03s3Y7reesASpAAA=',
-  '/shots/spectra-tools.webp':
+  '/shots/spectra/tools.webp':
     'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JZQCdMvIDTqFYbuCRLAAA/umB7C03H3dr4kMeTfoMAomr63UfGMiSdXBM7JIA',
 }

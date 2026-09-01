@@ -12,6 +12,12 @@ Two idempotent jobs:
      blurred preview immediately, so a frame is never an empty box while the
      real screenshot downloads.
 
+Shots live one folder per project — public/shots/snurra/dashboard.webp — so a
+project's images can be found, added to, or dropped as a set. Folder and file
+names must stay lowercase and hyphenated: the build host's filesystem is
+case-sensitive even though Windows isn't, and a stray capital breaks the URL
+there and only there.
+
 _shots-src/ holds the untouched originals and is gitignored — it must stay
 outside public/, which Vite copies verbatim into dist/ and publishes.
 
@@ -37,49 +43,49 @@ LQIP_QUALITY = 40
 # Raw screenshots to pull in from _shots-src/, named for the screen they show.
 # Left in place after conversion; re-running skips anything already converted.
 IMPORTS = {
-    "Money MAnager/Screenshot (1855).png": "jpc-money-dashboard",
-    "Money MAnager/Screenshot (1853).png": "jpc-money-income",
-    "Money MAnager/Screenshot (1852).png": "jpc-money-expenses",
-    "Money MAnager/Screenshot (1856).png": "jpc-money-subscriptions",
-    "Money MAnager/Screenshot (1860).png": "jpc-money-users",
-    "Money MAnager/Screenshot (1859).png": "jpc-money-payment",
-    "Money MAnager/Screenshot (1861).png": "jpc-money-permissions",
-    "Money MAnager/Screenshot (1862).png": "jpc-money-help",
-    "Hyperexponential/Screenshot (1847).png": "hx-rating-summary",
-    "Hyperexponential/Screenshot (1845).png": "hx-projections",
-    "Hyperexponential/Screenshot (1843).png": "hx-own-experience",
-    "Hyperexponential/Screenshot (1844).png": "hx-loss-ratios",
-    "Hyperexponential/Screenshot (1842).png": "hx-risk-composition",
-    "Hyperexponential/Screenshot (1841).png": "hx-policy-data",
-    "Hyperexponential/Screenshot (1846).png": "hx-profit-commission",
-    "Hyperexponential/Screenshot (1850).png": "hx-cat-loadings",
-    "Hyperexponential/Screenshot (1848).png": "hx-rationale",
-    "Hyperexponential/Screenshot (1849).png": "hx-risk-information",
+    "Money MAnager/Screenshot (1855).png": "jpc-money/dashboard",
+    "Money MAnager/Screenshot (1853).png": "jpc-money/income",
+    "Money MAnager/Screenshot (1852).png": "jpc-money/expenses",
+    "Money MAnager/Screenshot (1856).png": "jpc-money/subscriptions",
+    "Money MAnager/Screenshot (1860).png": "jpc-money/users",
+    "Money MAnager/Screenshot (1859).png": "jpc-money/payment",
+    "Money MAnager/Screenshot (1861).png": "jpc-money/permissions",
+    "Money MAnager/Screenshot (1862).png": "jpc-money/help",
+    "Hyperexponential/Screenshot (1847).png": "hyperexponential/rating-summary",
+    "Hyperexponential/Screenshot (1845).png": "hyperexponential/projections",
+    "Hyperexponential/Screenshot (1843).png": "hyperexponential/own-experience",
+    "Hyperexponential/Screenshot (1844).png": "hyperexponential/loss-ratios",
+    "Hyperexponential/Screenshot (1842).png": "hyperexponential/risk-composition",
+    "Hyperexponential/Screenshot (1841).png": "hyperexponential/policy-data",
+    "Hyperexponential/Screenshot (1846).png": "hyperexponential/profit-commission",
+    "Hyperexponential/Screenshot (1850).png": "hyperexponential/cat-loadings",
+    "Hyperexponential/Screenshot (1848).png": "hyperexponential/rationale",
+    "Hyperexponential/Screenshot (1849).png": "hyperexponential/risk-information",
     # NannyNow — portrait phone captures, rendered in the device stage.
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.14 PM.jpeg": "nanny-services",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM.jpeg": "nanny-booking-care",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM (1).jpeg": "nanny-booking-review",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.13 PM.jpeg": "nanny-broadcast",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.16 PM.jpeg": "nanny-chat",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.18 PM.jpeg": "nanny-community-qa",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.17 PM.jpeg": "nanny-community-events",
-    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.19 PM.jpeg": "nanny-account",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.14 PM.jpeg": "nannynow/services",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM.jpeg": "nannynow/booking-care",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.11 PM (1).jpeg": "nannynow/booking-review",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.13 PM.jpeg": "nannynow/broadcast",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.16 PM.jpeg": "nannynow/chat",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.18 PM.jpeg": "nannynow/community-qa",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.17 PM.jpeg": "nannynow/community-events",
+    "Nanny Now/WhatsApp Image 2026-09-01 at 2.47.19 PM.jpeg": "nannynow/account",
     # NannyNow admin console — landscape, shown behind the devices.
-    "Nanny now Admin/Screenshot (1867).png": "nanny-admin-dashboard",
-    "Nanny now Admin/Screenshot (1872).png": "nanny-admin-booking-detail",
-    "Nanny now Admin/Screenshot (1869).png": "nanny-admin-pricing",
-    "Nanny now Admin/Screenshot (1870).png": "nanny-admin-booking-options",
-    "Nanny now Admin/Screenshot (1871).png": "nanny-admin-packages",
-    "Nanny now Admin/Screenshot (1868).png": "nanny-admin-promos",
+    "Nanny now Admin/Screenshot (1867).png": "nannynow/admin-dashboard",
+    "Nanny now Admin/Screenshot (1872).png": "nannynow/admin-booking-detail",
+    "Nanny now Admin/Screenshot (1869).png": "nannynow/admin-pricing",
+    "Nanny now Admin/Screenshot (1870).png": "nannynow/admin-booking-options",
+    "Nanny now Admin/Screenshot (1871).png": "nannynow/admin-packages",
+    "Nanny now Admin/Screenshot (1868).png": "nannynow/admin-promos",
     # JPC Space — the mobile rebuild, replacing the old desktop captures.
     # The Students roster shot is deliberately not imported: it lists real
     # members' personal Gmail addresses.
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM.jpeg": "jpc-space-student-home",
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (2).jpeg": "jpc-space-assignments",
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (1).jpeg": "jpc-space-calendar",
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (5).jpeg": "jpc-space-leader-home",
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (2).jpeg": "jpc-space-submissions",
-    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM.jpeg": "jpc-space-reports",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM.jpeg": "jpc-space/student-home",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (2).jpeg": "jpc-space/assignments",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.58 PM (1).jpeg": "jpc-space/calendar",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (5).jpeg": "jpc-space/leader-home",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM (2).jpeg": "jpc-space/submissions",
+    "jpc-space/WhatsApp Image 2026-09-01 at 3.01.57 PM.jpeg": "jpc-space/reports",
 }
 
 
@@ -98,14 +104,15 @@ def import_sources() -> None:
         if not src.exists():
             print(f"  missing source, skipped: {rel}")
             continue
+        target.parent.mkdir(parents=True, exist_ok=True)
         fit(Image.open(src).convert("RGB"), MAX_WIDTH).save(
             target, "WEBP", quality=QUALITY, method=6
         )
-        print(f"  imported {rel} -> {target.name} ({target.stat().st_size // 1024}KB)")
+        print(f"  imported {rel} -> {stem}.webp ({target.stat().st_size // 1024}KB)")
 
 
 def normalize() -> None:
-    for path in sorted(SHOTS.glob("*.webp")):
+    for path in sorted(SHOTS.rglob("*.webp")):
         img = Image.open(path)
         if img.width <= MAX_WIDTH:
             continue
@@ -125,7 +132,10 @@ def lqip(path: Path) -> str:
 
 
 def write_placeholders() -> None:
-    entries = [(f"/shots/{p.name}", lqip(p)) for p in sorted(SHOTS.glob("*.webp"))]
+    entries = [
+        (f"/shots/{p.relative_to(SHOTS).as_posix()}", lqip(p))
+        for p in sorted(SHOTS.rglob("*.webp"))
+    ]
     body = "\n".join(f"  '{src}':\n    '{uri}'," for src, uri in entries)
     PLACEHOLDERS.write_text(
         "// Generated by scripts/shots.py — do not edit by hand.\n"
